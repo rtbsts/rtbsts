@@ -438,15 +438,9 @@ html.lenis, html.lenis body { height: auto; }
   opacity: 0; transition: opacity .8s var(--ease-out);
 }
 .pg__img.is-loaded { opacity: 1; }
-.pg__cap {
-  display: grid; padding-top: 8px; font-size: 12px; line-height: 15px;
-  opacity: 0; transform: translateY(-4px);
-  transition: opacity .4s var(--ease-out), transform .5s var(--ease-out);
-}
+.pg__cap { display: grid; padding-top: 8px; font-size: 12px; line-height: 15px; }
 .pg__line { color: var(--muted); }
-.pg__btn:hover .pg__cap, .pg__btn:focus-visible .pg__cap { opacity: 1; transform: none; }
 .pg__btn:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
-@media (hover: none) { .pg__cap { opacity: 1; transform: none; } }
 
 /* when one is open, the wall stays visible behind a white veil */
 .pg.is-open .pg__item.is-source { opacity: 0 !important; transition-duration: .2s; }

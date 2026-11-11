@@ -91,8 +91,7 @@
     slots.sort((a, b) => a.row - b.row || a.col - b.col);
 
     const pad = cellW * 0.09;                       // minimum half-gap around each image
-    // captions are always shown on touch screens, so leave room for up to four lines
-    const capRoom = matchMedia('(hover: none)').matches ? 84 : 44;
+    const capRoom = 84;                             // captions are always shown: room for four lines
     for (const { col, row, idx } of slots) {
       const d = data[idx];
       const layer = Math.floor(r() * LAYERS.length);
