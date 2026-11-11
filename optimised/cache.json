@@ -1640,5 +1640,19 @@
   "color": "#a29f9d",
   "base": "img/wuda/rb-wu-001",
   "key": "78e66a31526dac5ff62453d7d9c7df0854e0bb31"
+ },
+ "bang/rb-ba-008.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 3573,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#989390",
+  "base": "img/bang/rb-ba-008",
+  "key": "3e3649fc81c13c068c407faf827d1d446b99547e"
  }
 }

@@ -16,9 +16,14 @@
   ],
   "cover": "/originals/bang/rb-ba-006.jpeg",
   "coverPortrait": "",
-  "thumb": "/originals/bang/rb-ba-005.gif",
-  "thumbHover": "",
+  "thumb": "/originals/bang/rb-ba-008.jpg",
+  "thumbHover": "/originals/bang/rb-ba-005.gif",
   "gallery": [
+    {
+      "layout": "pair",
+      "image": "/originals/bang/rb-ba-008.jpg",
+      "image2": "/originals/bang/rb-ba-005.gif"
+    },
     {
       "layout": "full",
       "image": "/originals/bang/rb-ba-001.jpeg"
@@ -30,10 +35,6 @@
     {
       "layout": "full",
       "image": "/originals/bang/rb-ba-003.jpeg"
-    },
-    {
-      "layout": "half",
-      "image": "/originals/bang/rb-ba-005.gif"
     },
     {
       "layout": "full",
