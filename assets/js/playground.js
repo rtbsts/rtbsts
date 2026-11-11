@@ -2,7 +2,7 @@
    Rita Bastos — playground.js
    An endless wall of loose images: drag, scroll or swipe in any direction.
    Images sit on three depth layers that move at slightly different speeds.
-   Clicking one opens it as large as the screen allows, on the plain page.
+   Clicking one opens it as large as the screen allows, over a white veil.
    ========================================================================== */
 (() => {
   'use strict';
@@ -40,65 +40,109 @@
   };
 
   /* ---------- layout ----------------------------------------------------- */
-  let cells = [];                 // { el, img, x, y, w, h, z }
+  // Each image gets its own cell with breathing room around it, so images don't
+  // pile on top of each other. Every image appears once before any repeats, and
+  // repeats are placed as far as possible from their twin (the wall wraps around).
+  let cells = [];                 // { el, img, x, y, w, h, layer, idx }
   let TW = 0, TH = 0, VW = 0, VH = 0;
-  const DEPTHS = [0.82, 1, 1.18];
+  // depth layers: size, and how loosely they follow the movement (felt while
+  // moving; at rest all layers line up again, so spacing is preserved)
+  const LAYERS = [{ s: 0.86, ease: 0.06 }, { s: 1, ease: 0.085 }, { s: 1.1, ease: 0.11 }];
 
   function build() {
     VW = innerWidth; VH = innerHeight;
     const portrait = VW < 760 || VH > VW;
-    const cellW = portrait ? Math.max(VW * 0.5, 170) : Math.min(Math.max(VW * 0.2, 220), 400);
-    const cellH = cellW * 1.2;
-    const cols = Math.max(4, Math.ceil((VW + cellW * 1.6) / cellW));
-    const rows = Math.max(3, Math.ceil((VH + cellH * 1.6) / cellH));
+    const cellW = portrait ? Math.max(VW * 0.58, 190) : Math.min(Math.max(VW * 0.24, 260), 470);
+    const cellH = cellW * (portrait ? 1.25 : 1.12);
+    const n = templates.length;
+    // the wall must be wider/taller than the screen, so a repeat is never in view twice
+    let cols = Math.max(3, Math.ceil(VW / cellW) + 2);
+    let rows = Math.max(3, Math.ceil(VH / cellH) + 2);
+    while (cols * rows < n) { if (cols * cellW <= rows * cellH) cols++; else rows++; }
     TW = cols * cellW; TH = rows * cellH;
 
     list.textContent = '';
     cells = [];
     const r = rand(1234);
-    const n = templates.length;
-    for (let row = 0; row < rows; row++) {
-      for (let col = 0; col < cols; col++) {
-        const idx = (row * cols + col + row * 3) % n;
-        const d = data[idx];
-        const z = DEPTHS[Math.floor(r() * DEPTHS.length)];
-        const ar = d.w / d.h;
-        // size: landscape images wider, portrait narrower; nearer layers bigger
-        let w = cellW * (ar >= 1 ? 0.85 + r() * 0.35 : 0.6 + r() * 0.25) * z;
-        let h = w / ar;
-        if (h > cellH * 1.05) { h = cellH * 1.05; w = h * ar; }
-        const x = col * cellW + (r() - 0.25) * Math.max(cellW - w, cellW * 0.2);
-        const y = row * cellH + (r() - 0.25) * Math.max(cellH - h - 40, cellH * 0.2);
 
-        const el = templates[idx].cloneNode(true);
-        el.dataset.n = idx;
-        el.style.setProperty('--w', `${w.toFixed(1)}px`);
-        el.style.setProperty('--ar', `${d.w} / ${d.h}`);
-        el.style.setProperty('--ph', d.color || '#f2f2f2');
-        el.style.zIndex = String(Math.round(z * 10));
-        const img = el.querySelector('.pg__img');
-        const done = () => img.classList.add('is-loaded');
-        if (img.complete && img.naturalWidth) done(); else img.addEventListener('load', done, { once: true });
-        list.appendChild(el);
-        cells.push({ el, img, x, y, w, h: h + 36, z, idx });
+    // fill cells in a shuffled order: least-used image first, then the one
+    // farthest from its other copies (distance measured around the wrap)
+    const slots = [];
+    for (let row = 0; row < rows; row++) for (let col = 0; col < cols; col++) slots.push({ col, row });
+    for (let i = slots.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [slots[i], slots[j]] = [slots[j], slots[i]]; }
+    const uses = Array.from({ length: n }, () => []);
+    const wrapDist = (a, b) => {
+      const dx = Math.min(Math.abs(a.col - b.col), cols - Math.abs(a.col - b.col)) * cellW;
+      const dy = Math.min(Math.abs(a.row - b.row), rows - Math.abs(a.row - b.row)) * cellH;
+      return Math.hypot(dx, dy);
+    };
+    const order = Array.from({ length: n }, (_, i) => i);
+    for (let i = n - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+    for (const slot of slots) {
+      let best = -1, bestKey = null;
+      for (const i of order) {
+        const near = uses[i].length ? Math.min(...uses[i].map(u => wrapDist(u, slot))) : Infinity;
+        const key = [-uses[i].length, near];
+        if (!bestKey || key[0] > bestKey[0] || (key[0] === bestKey[0] && key[1] > bestKey[1])) { best = i; bestKey = key; }
       }
+      uses[best].push(slot);
+      slot.idx = best;
+    }
+    slots.sort((a, b) => a.row - b.row || a.col - b.col);
+
+    const pad = cellW * 0.09;                       // minimum half-gap around each image
+    // captions are always shown on touch screens, so leave room for up to four lines
+    const capRoom = matchMedia('(hover: none)').matches ? 84 : 44;
+    for (const { col, row, idx } of slots) {
+      const d = data[idx];
+      const layer = Math.floor(r() * LAYERS.length);
+      const ar = d.w / d.h;
+      // landscape a bit wider, portrait narrower; then fit inside the cell
+      let w = cellW * (ar >= 1 ? 0.62 + r() * 0.16 : 0.42 + r() * 0.14) * LAYERS[layer].s;
+      let h = w / ar;
+      const maxW = cellW - pad * 2, maxH = cellH - pad * 2 - capRoom;
+      if (w > maxW) { w = maxW; h = w / ar; }
+      if (h > maxH) { h = maxH; w = h * ar; }
+      // stagger alternate columns, then place randomly inside the free space
+      const shift = (col % 2) * cellH * 0.35;
+      const x = col * cellW + pad + r() * (cellW - pad * 2 - w);
+      const y = row * cellH + shift + pad + r() * (cellH - pad * 2 - capRoom - h);
+
+      const el = templates[idx].cloneNode(true);
+      el.dataset.n = idx;
+      el.style.setProperty('--w', `${w.toFixed(1)}px`);
+      el.style.setProperty('--ar', `${d.w} / ${d.h}`);
+      el.style.setProperty('--ph', d.color || '#f2f2f2');
+      el.style.zIndex = String(layer + 1);
+      const img = el.querySelector('.pg__img');
+      const done = () => img.classList.add('is-loaded');
+      if (img.complete && img.naturalWidth) done(); else img.addEventListener('load', done, { once: true });
+      list.appendChild(el);
+      cells.push({ el, img, x, y, w, h: h + 70, layer, idx });
     }
     // staggered entrance
     cells.forEach((c, i) => setTimeout(() => c.el.classList.add('is-in'), reduceMotion ? 0 : 60 + (i % 12) * 45));
   }
 
   /* ---------- motion ----------------------------------------------------- */
-  const target = { x: 0, y: 0 }, pos = { x: 0, y: 0 };
+  const target = { x: 0, y: 0 };
+  const lpos = LAYERS.map(() => ({ x: 0, y: 0 }));   // each layer trails the target at its own pace
   const mod = (a, b) => ((a % b) + b) % b;
   let running = false, locked = false;
 
   function render() {
-    const ease = reduceMotion ? 1 : 0.09;
-    pos.x += (target.x - pos.x) * ease;
-    pos.y += (target.y - pos.y) * ease;
+    let moving = false;
+    lpos.forEach((p, i) => {
+      const ease = reduceMotion ? 1 : LAYERS[i].ease;
+      p.x += (target.x - p.x) * ease;
+      p.y += (target.y - p.y) * ease;
+      if (Math.abs(target.x - p.x) > 0.1 || Math.abs(target.y - p.y) > 0.1) moving = true;
+      else { p.x = target.x; p.y = target.y; }
+    });
     for (const c of cells) {
-      const px = mod(c.x + pos.x * c.z + c.w, TW) - c.w;
-      const py = mod(c.y + pos.y * c.z + c.h, TH) - c.h;
+      const p = lpos[c.layer];
+      const px = mod(c.x + p.x + c.w, TW) - c.w;
+      const py = mod(c.y + p.y + c.h, TH) - c.h;
       c.px = px; c.py = py;
       c.el.style.transform = `translate3d(${px.toFixed(1)}px, ${py.toFixed(1)}px, 0)`;
       if (!reduceMotion) {        // subtle parallax inside each frame
@@ -107,7 +151,7 @@
         c.img.style.setProperty('--py', `${(-cy * 4).toFixed(2)}%`);
       }
     }
-    if (Math.abs(target.x - pos.x) > 0.1 || Math.abs(target.y - pos.y) > 0.1) requestAnimationFrame(render);
+    if (moving) requestAnimationFrame(render);
     else running = false;
   }
   const kick = () => { if (!running) { running = true; requestAnimationFrame(render); } };
@@ -162,6 +206,8 @@
     if (btn) { e.preventDefault(); openedBy = e.detail === 0 ? 'key' : 'pointer'; open(btn.closest('.pg__item')); }
   });
   let openedBy = 'pointer';
+  let lastX = innerWidth / 2;
+  addEventListener('mousemove', e => { lastX = e.clientX; }, { passive: true });
   addEventListener('keydown', e => {
     if (lbState) {
       if (e.key === 'Escape') close();
@@ -183,7 +229,7 @@
 
   function fitRect(d) {
     const g = gutter();
-    const top = 70, bottom = VW < 760 || VH > VW ? 136 : 92;   // keep clear of menu and caption bar
+    const top = 70, bottom = VW < 760 || VH > VW ? 156 : 100;   // keep clear of menu and caption bar
     const aw = VW - g * 2, ah = VH - top - bottom;
     const s = Math.min(aw / d.w, ah / d.h);
     const w = d.w * s, h = d.h * s;
@@ -226,7 +272,6 @@
     if (startSrc && startSrc !== data[idx].full) {          // upgrade to the sharpest file
       const hi = new Image(); hi.onload = () => { if (img.isConnected) img.src = hi.src; }; hi.src = data[idx].full;
     }
-    img.addEventListener('click', e => { e.stopPropagation(); if (lbState && performance.now() - (lbState.t || 0) > 350) close(); });
     return img;
   }
 
@@ -238,8 +283,11 @@
     const thumb = item.querySelector('.pg__img');
     const from = rectOf(frame);
     item.classList.add('is-source');
-    root.classList.add('is-open');
     lb.hidden = false;
+    lb.dataset.cursor = ZONE_LABEL[zoneAt(lastX)];
+    void lb.offsetWidth;                       // let the veil fade in
+    root.classList.add('is-open');
+    document.dispatchEvent(new Event('cursor:refresh'));
     fill(idx);
     const img = makeImg(idx, thumb.currentSrc || thumb.src);
     figure.prepend(img);
@@ -283,14 +331,23 @@
     lb.hidden = true;
     lbState = null;
     locked = false;
+    document.dispatchEvent(new Event('cursor:refresh'));
     if (openedBy !== 'key' && document.activeElement) document.activeElement.blur();
   }
 
+  // with a mouse, the screen is split in three: left = Previous, middle = Close, right = Next
+  // (the cursor label follows the zone); on touch screens a tap closes and a swipe changes image
+  const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+  const zoneAt = x => (!finePointer.matches ? 'close' : x < VW * 0.3 ? 'prev' : x > VW * 0.7 ? 'next' : 'close');
+  const ZONE_LABEL = { prev: 'Previous', next: 'Next', close: 'Close' };
+  lb.addEventListener('mousemove', e => { lb.dataset.cursor = ZONE_LABEL[zoneAt(e.clientX)]; });
   lb.addEventListener('click', e => {
     if (lbState && performance.now() - (lbState.t || 0) < 350) return;   // the click that opened it
     const a = e.target.closest('[data-lb]');
-    if (a) { e.stopPropagation(); a.dataset.lb === 'close' ? close() : step(a.dataset.lb === 'next' ? 1 : -1); }
-    else if (!e.target.closest('.pg-lb__img')) close();
+    const zone = a ? a.dataset.lb : e.target.closest('.pg-lb__bar, .pg-lb__cap') ? null : zoneAt(e.clientX);
+    if (!zone) return;
+    e.stopPropagation();
+    zone === 'close' ? close() : step(zone === 'next' ? 1 : -1);
   });
   // swipe between images on touch screens
   let sw = null;
@@ -304,8 +361,9 @@
   /* ---------- start ------------------------------------------------------ */
   // centre the first view on the middle of the wall
   build();
-  target.x = pos.x = -(TW - VW) / 2 * 0.5;
-  target.y = pos.y = -(TH - VH) / 2 * 0.5;
+  target.x = -(TW - VW) / 2 * 0.5;
+  target.y = -(TH - VH) / 2 * 0.5;
+  lpos.forEach(p => { p.x = target.x; p.y = target.y; });
   render();
   let rt;
   addEventListener('resize', () => {

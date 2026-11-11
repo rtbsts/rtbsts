@@ -153,11 +153,16 @@
       x = e.clientX; y = e.clientY;
       if (!raf) raf = requestAnimationFrame(loop);
     }, { passive: true });
-    document.addEventListener('mouseover', e => {
-      const t = e.target.closest('[data-cursor]');
-      if (t) { label.textContent = t.dataset.cursor; cursor.classList.add('is-active'); }
+    const update = node => {
+      const t = node && node.closest && node.closest('[data-cursor], [data-cursor-off]');
+      if (t && t.dataset.cursor) { label.textContent = t.dataset.cursor; cursor.classList.add('is-active'); }
       else cursor.classList.remove('is-active');
-    });
+    };
+    document.addEventListener('mouseover', e => update(e.target));
+    // labels can change while moving inside one element (e.g. Previous / Close / Next zones)
+    addEventListener('mousemove', e => { if (cursor.classList.contains('is-active')) update(e.target); }, { passive: true });
+    // pages can ask for a re-check when something appears under a still mouse (e.g. a lightbox)
+    document.addEventListener('cursor:refresh', () => update(document.elementFromPoint(x, y)));
     document.addEventListener('mouseleave', () => cursor.classList.remove('is-active'));
   }
 

@@ -96,10 +96,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   display: inline-block; overflow: hidden; line-height: 1.1;
 }
 .nav__link--home  { left: var(--gutter); }
-.nav__link--work  { right: 15%; }
-.nav__link--playground { right: 15%; }
-.nav:has(.nav__link--playground) .nav__link--work { right: 30%; }
-.nav__link--about { right: var(--gutter); }
+/* Work · Playground · About: one group on the right, with the same gap between each */
+.nav__group {
+  position: absolute; top: 25px; right: var(--gutter);
+  display: flex; gap: clamp(32px, 8.5vw, 150px);
+}
+.nav__group .nav__link { position: relative; top: auto; }
+.nav__group:not(:has(.nav__link--playground)) { gap: calc(15vw - 3em); }
 
 /* "roll" effect: the text slides up and a copy appears underneath */
 .nav__text { display: inline-block; position: relative; transition: transform .55s var(--ease); }
@@ -281,6 +284,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   }
   .cursor.is-active .cursor__label { transform: scale(1); }
   .js [data-cursor], .js [data-cursor] * { cursor: none; }
+  .js [data-cursor-off], .js [data-cursor-off] * { cursor: auto; }
+  .js [data-cursor-off] button { cursor: pointer; }
 }
 
 /* Smooth scrolling (Lenis) */
@@ -355,11 +360,10 @@ html.lenis, html.lenis body { height: auto; }
 /* 8. Mobile / portrait ---------------------------------------------------- */
 @media (orientation: portrait), (max-width: 760px) {
   :root { --fs-nav: 20px; }
-  .nav__link--work { right: auto; left: 50%; }
-  /* with the Playground link: smaller type, links grouped on the right */
+  /* with the Playground link: smaller type, same gap between the three links */
   .nav:has(.nav__link--playground) { font-size: 16px; }
-  .nav:has(.nav__link--playground) .nav__link--work { left: auto; right: calc(var(--gutter) + 10.3em); }
-  .nav__link--playground { right: calc(var(--gutter) + 3.9em); }
+  .nav__group { gap: 1em; }
+  .nav__group:not(:has(.nav__link--playground)) { gap: 2em; }
   .media--banner { height: 70vh; }
 
   .meta { grid-template-columns: 1fr 1fr auto; row-gap: 40px; padding-bottom: 30px; font-size: 15px; }
@@ -435,7 +439,7 @@ html.lenis, html.lenis body { height: auto; }
 }
 .pg__img.is-loaded { opacity: 1; }
 .pg__cap {
-  display: grid; padding-top: 7px; font-size: 10px; line-height: 13px;
+  display: grid; padding-top: 8px; font-size: 12px; line-height: 15px;
   opacity: 0; transform: translateY(-4px);
   transition: opacity .4s var(--ease-out), transform .5s var(--ease-out);
 }
@@ -444,9 +448,8 @@ html.lenis, html.lenis body { height: auto; }
 .pg__btn:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
 @media (hover: none) { .pg__cap { opacity: 1; transform: none; } }
 
-/* other images fade away when one is open */
-.pg.is-open .pg__item { opacity: 0 !important; transition-duration: .45s; }
-.pg.is-open .pg__item.is-source { transition-delay: .05s; }
+/* when one is open, the wall stays visible behind a white veil */
+.pg.is-open .pg__item.is-source { opacity: 0 !important; transition-duration: .2s; }
 
 .pg__hint {
   position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px));
@@ -457,22 +460,28 @@ html.lenis, html.lenis body { height: auto; }
 }
 .pg__hint.is-hidden, .pg.is-open .pg__hint { opacity: 0; }
 
-/* lightbox: the image on the plain white page, nothing in between */
+/* lightbox: the image over an 85% white veil, the wall faintly visible behind */
 .pg-lb { position: fixed; inset: 0; z-index: 40; }
+.pg-lb::before {
+  content: ""; position: fixed; inset: 0;
+  background: rgb(255 255 255 / .85);
+  opacity: 0; transition: opacity .6s var(--ease-out);
+}
+.pg.is-open .pg-lb::before { opacity: 1; }
 .pg-lb[hidden] { display: none; }
 .pg-lb__img {
   position: fixed; left: 0; top: 0; display: block; margin: 0;
   transform-origin: 0 0; will-change: transform;
-  -webkit-user-drag: none; user-select: none; cursor: zoom-out;
+  -webkit-user-drag: none; user-select: none;
 }
 .pg-lb__cap {
   position: fixed; left: var(--gutter); bottom: calc(20px + env(safe-area-inset-bottom, 0px));
-  display: grid; font-size: 10px; line-height: 13px; max-width: 50%;
+  display: grid; font-size: 12px; line-height: 15px; max-width: 50%;
   opacity: 0; transition: opacity .5s var(--ease-out);
 }
 .pg-lb__bar {
   position: fixed; right: var(--gutter); bottom: calc(20px + env(safe-area-inset-bottom, 0px));
-  display: flex; gap: 22px; align-items: baseline; font-size: 10px;
+  display: flex; gap: 22px; align-items: baseline; font-size: 12px;
   opacity: 0; transition: opacity .5s var(--ease-out);
 }
 .pg-lb.is-ready .pg-lb__cap, .pg-lb.is-ready .pg-lb__bar { opacity: 1; }

@@ -310,9 +310,11 @@ def header(ctx: Ctx, current: str) -> str:
     return f"""<header class="header">
   <nav class="nav" aria-label="Main">
     {link("index.html", ctx.site["name"], "home", "nav__link--home")}
+    <div class="nav__group">
     {link("work.html", "Work", "work", "nav__link--work")}
     {link("playground.html", esc(ctx.data["playground"]["title"]), "playground", "nav__link--playground") if ctx.data["playground"]["items"] else ""}
     {link("about.html", "About", "about", "nav__link--about")}
+    </div>
   </nav>
 </header>"""
 
@@ -547,9 +549,9 @@ def page_playground(ctx: Ctx) -> str:
     </ul>
   </div>
   <p class="pg__hint" aria-hidden="true">Drag or scroll to explore</p>
-  <div class="pg-lb" hidden>
-    <figure class="pg-lb__figure"><figcaption class="pg-lb__cap"></figcaption></figure>
-    <div class="pg-lb__bar">
+  <div class="pg-lb" data-cursor="Close" hidden>
+    <figure class="pg-lb__figure"><figcaption class="pg-lb__cap" data-cursor-off></figcaption></figure>
+    <div class="pg-lb__bar" data-cursor-off>
       <span class="pg-lb__count"></span>
       <button class="pg-lb__btn" type="button" data-lb="prev">Previous</button>
       <button class="pg-lb__btn" type="button" data-lb="next">Next</button>
