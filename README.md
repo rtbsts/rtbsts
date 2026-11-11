@@ -1,10 +1,10 @@
 # Rita Bastos — Website
 
 Portfolio site for [ritabastos.pt](https://ritabastos.pt).
-Content is edited in **Pages CMS**, stored in this GitHub repository, and published automatically by **Cloudflare Pages**. Everything is free.
+Content is edited in **Pages CMS**, stored in this GitHub repository, and published automatically by **Cloudflare**. Everything is free.
 
 ```
-Pages CMS  ──save──▶  GitHub (this repo)  ──triggers──▶  Cloudflare Pages build  ──▶  ritabastos.pt
+Pages CMS  ──save──▶  GitHub (this repo)  ──triggers──▶  Cloudflare build  ──▶  ritabastos.pt
 ```
 
 ## Editing the site (day to day)
@@ -53,18 +53,15 @@ python3 build.py --clean    # rebuild everything from scratch
 
 ## One-time setup
 
-### Cloudflare Pages
-Workers & Pages → Create → Pages → Connect to Git → choose this repository, then:
-
-- **Framework preset:** None
-- **Build command:** `pip install -r requirements.txt && python3 build.py`
-- **Build output directory:** `dist`
-- **Environment variable:** `PYTHON_VERSION` = `3.12`
+### Cloudflare
+The project is a Cloudflare **Worker with static assets**, configured in `wrangler.jsonc`.
+Every push to `main` (including every save in Pages CMS) runs `build.py` and publishes `dist/`.
+In the Cloudflare dashboard the defaults are fine: deploy command `npx wrangler deploy`, root directory `/`.
 
 ### Domain (ritabastos.pt, registered at dominios.pt)
 1. In Cloudflare: Add a domain → `ritabastos.pt` → Free plan. Cloudflare shows two nameservers.
 2. At dominios.pt, replace the domain's nameservers (DNS servers) with the two from Cloudflare. This can take a few hours to take effect.
-3. In the Cloudflare Pages project → Custom domains → add `ritabastos.pt` and `www.ritabastos.pt`.
+3. In the Cloudflare Worker (rtbsts) → Settings → Domains & Routes → Add → Custom domain: `ritabastos.pt`, then again for `www.ritabastos.pt`.
 
 ## Effects and where they live
 - **Loader, reveals, hovers, cursor, smooth scrolling:** `assets/js/main.js` and `assets/css/main.css`.
