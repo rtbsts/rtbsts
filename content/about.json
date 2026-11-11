@@ -1,31 +1,51 @@
 {
-  "bio": "Multidisciplinary Graphic Designer and Art Director based in Porto, Portugal. Holds a degree in Communication Design from FBAUP. Works full-time at a design studio and part-time as a freelancer, catering to a wide range of clients. Since the beginning of 2015, I have been involved in a wide array of graphic design projects, spanning from print to digital, with a particular expertise in all things print and graphic production, including paper/material selection, printing methods, and several finishing techniques, with a recent emphasis on sustainable choices in my design work. My primary experience lies in Branding and Packaging projects, but I've also ventured into various other design domains, such as Editorial Design, Infographics, Beverage Labeling, Naming, Environments, Signage, Exhibition Design, Motion Graphics, and Web Design. In recent times, I have incorporated photography as a complementary element to my graphic design and visual identity work, as exemplified in the majority of the projects I present, featuring photos I have taken. Always striving to enhance my skills and absorb knowledge from my surroundings to develop more solid ideas and stronger concepts.",
+  "bio": "Graphic designer based in Porto, with a degree in Communication Design from the Faculty of Fine Arts of the University of Porto. My work spans branding, art direction, packaging, label design, signage, UI design and editorial design. I am particularly interested in projects that challenge me creatively and allow me to expand both my graphic and conceptual practice.",
   "experience": [
     {
-      "dates": "Mar 2020 — Present",
+      "dates": "Dec 2024 — Present",
+      "place": "Series Eight, London (remote)",
+      "role": "Lead Brand Designer"
+    },
+    {
+      "dates": "Apr 2024 — Dec 2024",
+      "place": "Series Eight, London (remote)",
+      "role": "Senior Art Director (Brand / UI)"
+    },
+    {
+      "dates": "Jun 2018 — Present",
+      "place": "Freelance, Porto",
+      "role": "Graphic Designer"
+    },
+    {
+      "dates": "Jan 2023 — Apr 2024",
       "place": "327 Creative Studio, Porto",
       "role": "Art Director & Senior Designer"
     },
     {
-      "dates": "Oct 2018 — Mar 2020",
-      "place": "Legendary, Porto",
+      "dates": "Mar 2020 — Jun 2023",
+      "place": "327 Creative Studio, Porto",
+      "role": "Brand Designer"
+    },
+    {
+      "dates": "Nov 2018 — Mar 2020",
+      "place": "Legendary People + Ideas, Porto",
       "role": "Graphic Designer"
     },
     {
       "dates": "Feb 2015 — May 2018",
-      "place": "Volta Studio, Porto",
+      "place": "VOLTA Brand Shaping Studio, Porto",
       "role": "Graphic Designer"
     }
   ],
   "education": [
     {
-      "dates": "Oct 2013 — Mar 2014",
-      "place": "Design e Arti Multimediali Erasmus",
-      "role": "Instituto Universitario di Architettura di Venezia, Italy"
+      "dates": "2013 — 2014",
+      "place": "Erasmus, Design e Arti Multimediali",
+      "role": "Università Iuav di Venezia, Italy"
     },
     {
-      "dates": "Sep 2011 — Jul 2015",
-      "place": "Communication Design Graduation",
+      "dates": "2011 — 2015",
+      "place": "Licentiate Degree, Communication Design",
       "role": "Faculdade de Belas Artes da Universidade do Porto, Portugal"
     }
   ],
