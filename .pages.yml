@@ -138,6 +138,44 @@ content:
               values: ["16/9", "4/3", "1/1", "9/16", "21/9"]
 
   # ------------------------------------------------------------------ #
+  - name: playground
+    label: Playground
+    type: file
+    path: content/playground.json
+    format: json
+    fields:
+      - name: title
+        label: Page name (shown in the menu)
+        type: string
+        required: true
+      - name: items
+        label: Images
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{index}. {title}"
+        description: "Order doesn't matter much: the wall is endless and the images are scattered automatically."
+        fields:
+          - { name: image, label: Image, type: image, required: true }
+          - { name: title, label: Project name, type: string, required: true }
+          - name: category
+            label: Category
+            type: string
+            description: "e.g. Branding, Packaging, Editorial Design"
+          - name: credits
+            label: Credits
+            type: string
+            description: "e.g. Designed at 327 Creative Studio"
+          - name: photography
+            label: Photography
+            type: string
+            description: "e.g. Photography by Rita Bastos"
+          - name: hidden
+            label: Hide this image
+            type: boolean
+
+  # ------------------------------------------------------------------ #
   - name: about
     label: About page
     type: file

@@ -10,7 +10,8 @@
 
   /* ---------- 0. Smooth scrolling (Lenis), mouse/trackpad only ----------- */
   let lenis = null;
-  if (!reduceMotion && window.Lenis && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  if (!reduceMotion && window.Lenis && matchMedia('(hover: hover) and (pointer: fine)').matches
+      && !document.body.classList.contains('page-playground')) {
     lenis = new window.Lenis({ lerp: 0.09, smoothWheel: true, wheelMultiplier: 1 });
     const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
     requestAnimationFrame(raf);
@@ -86,7 +87,7 @@
     const num = loaderEl.querySelector('.loader__num');
     const bar = loaderEl.querySelector('.loader__progress');
     // "important" images: the first visible ones
-    const critical = $$('img.media__el').slice(0, 3);
+    const critical = $$('img.media__el, .pg__img').slice(0, 3);
     const total = critical.length || 1;
     let done = 0, shown = 0, finished = false;
     // only animate the name once the font is ready (avoids a typeface "jump")

@@ -311,6 +311,7 @@ def header(ctx: Ctx, current: str) -> str:
   <nav class="nav" aria-label="Main">
     {link("index.html", ctx.site["name"], "home", "nav__link--home")}
     {link("work.html", "Work", "work", "nav__link--work")}
+    {link("playground.html", esc(ctx.data["playground"]["title"]), "playground", "nav__link--playground") if ctx.data["playground"]["items"] else ""}
     {link("about.html", "About", "about", "nav__link--about")}
   </nav>
 </header>"""
@@ -511,6 +512,57 @@ def page_project(ctx: Ctx, p: dict, nxt: dict) -> str:
 """ + footer(ctx))
 
 
+def page_playground(ctx: Ctx) -> str:
+    pg = ctx.data["playground"]
+    items = []
+    for n, it in enumerate(pg["items"]):
+        meta = ctx.media[it["image"]]
+        if meta["type"] == "video":                     # GIF/video: use its still poster here
+            src = f'{meta["base"]}-poster.webp'
+            img = (f'<img class="pg__img" src="{src}" width="{meta["w"]}" height="{meta["h"]}" '
+                   f'alt="{esc(it["title"])}" decoding="async" loading="lazy" draggable="false">')
+            full = src
+        else:
+            img = (f'<img class="pg__img" src="{meta["base"]}-{meta["widths"][0]}.webp" srcset="{srcset(meta)}" '
+                   f'sizes="(orientation: portrait) 60vw, 30vw" width="{meta["w"]}" height="{meta["h"]}" '
+                   f'alt="{esc(it["title"])}" decoding="async" loading="lazy" draggable="false">')
+            full = f'{meta["base"]}-{meta["widths"][-1]}.webp'
+        lines = "".join(f'<span class="pg__line">{esc(x)}</span>' for x in it["lines"])
+        items.append(
+            f'<li class="pg__item" data-n="{n}" data-color="{meta["color"]}">'
+            f'<button class="pg__btn" type="button" data-cursor="View" data-full="{full}" '
+            f'aria-label="Open {esc(it["title"])}">'
+            f'<span class="pg__frame">{img}</span>'
+            f'<span class="pg__cap"><span class="pg__title">{esc(it["title"])}</span>'
+            f'{lines}</span></button></li>')
+    title = pg["title"]
+    return (head(ctx, title, f"{title} — loose images, experiments and single-image projects by {ctx.site['name']}.",
+                 "page-playground", pg["items"][0]["image"] if pg["items"] else None)
+            + header(ctx, "playground")
+            + f"""<main id="main" class="main pg">
+  <h1 class="sr-only">{esc(title)}</h1>
+  <div class="pg__stage">
+    <ul class="pg__items">
+      {"".join(items)}
+    </ul>
+  </div>
+  <p class="pg__hint" aria-hidden="true">Drag or scroll to explore</p>
+  <div class="pg-lb" hidden>
+    <figure class="pg-lb__figure"><figcaption class="pg-lb__cap"></figcaption></figure>
+    <div class="pg-lb__bar">
+      <span class="pg-lb__count"></span>
+      <button class="pg-lb__btn" type="button" data-lb="prev">Previous</button>
+      <button class="pg-lb__btn" type="button" data-lb="next">Next</button>
+      <button class="pg-lb__btn" type="button" data-lb="close">Close</button>
+    </div>
+  </div>
+</main>
+<script src="assets/js/playground.js" defer></script>
+</body>
+</html>
+""")
+
+
 def page_404(ctx: Ctx) -> str:
     return (head(ctx, "Not found", "Page not found", "page-404")
             + header(ctx, "")
@@ -565,17 +617,28 @@ def load_content() -> dict:
         projects.append(p)
     projects.sort(key=lambda p: (p.get("order", 999), p["title"].lower()))
     cv = lambda items: [[x.get("dates", ""), x.get("place", ""), x.get("role", "")] for x in items or []]
+    pg_file = CONTENT_DIR / "playground.json"
+    pg = read(pg_file) if pg_file.exists() else {}
+    playground = {
+        "title": (pg.get("title") or "Playground").strip(),
+        "intro": pg.get("intro") or "",
+        "items": [{"image": _media_path(i.get("image", "")), "title": i.get("title", ""),
+                   "lines": [str(i.get(k) or "").strip() for k in ("category", "credits", "photography")
+                             if str(i.get(k) or "").strip()]}
+                  for i in pg.get("items") or [] if i.get("image") and not i.get("hidden")],
+    }
     return {
         "site": {k: v for k, v in settings.items() if k != "contact"},
         "contact": settings.get("contact", {}),
         "projects": projects,
+        "playground": playground,
         "about": {"bio": about.get("bio", ""), "experience": cv(about.get("experience")),
                   "education": cv(about.get("education")), "awards": about.get("awards") or []},
     }
 
 
 def collect_media(data: dict) -> set[str]:
-    paths = set()
+    paths = {i["image"] for i in data["playground"]["items"]}
     for p in data["projects"]:
         for k in ("cover", "coverPortrait", "thumb", "thumbHover"):
             if p.get(k):
@@ -617,6 +680,7 @@ def main() -> None:
         "index.html": page_index(ctx),
         "work.html": page_work(ctx),
         "about.html": page_about(ctx),
+        **({"playground.html": page_playground(ctx)} if ctx.data["playground"]["items"] else {}),
         "404.html": page_404(ctx),
     }
     live = [p for p in data["projects"] if not p.get("comingSoon")]
