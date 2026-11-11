@@ -211,6 +211,11 @@ content:
         label: Awards
         type: string
         list: true
+      - name: featured
+        label: Featured
+        type: string
+        list: true
+        description: "Features in publications and galleries. The section only shows when it has items."
 
   # ------------------------------------------------------------------ #
   - name: settings

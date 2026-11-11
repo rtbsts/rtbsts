@@ -423,6 +423,16 @@ def page_about(ctx: Ctx) -> str:
             f'<li class="cv__row" data-reveal="up"><span>{esc(x[0])}</span><span>{esc(x[1])}</span><span>{esc(x[2])}</span></li>'
             for x in items)
     awards = "\n".join(f'<li data-reveal="up">/ {esc(x)}</li>' for x in a["awards"])
+    featured_items = "\n".join(f'<li data-reveal="up">/ {esc(x)}</li>' for x in a.get("featured") or [])
+    featured = f"""
+
+  <section class="cv">
+    <h2 class="cv__label" data-reveal="up">Featured</h2>
+    <ul class="cv__awards">
+{featured_items}
+    </ul>
+  </section>""" if featured_items else ""
+
     email = _obfuscate(c["email"])
     phone = _obfuscate(c["phone"])
     phone_href = _obfuscate("tel:" + c["phone"].replace(" ", ""))
@@ -459,7 +469,7 @@ def page_about(ctx: Ctx) -> str:
     <ul class="cv__awards">
 {awards}
     </ul>
-  </section>
+  </section>{featured}
 </main>
 """ + footer(ctx))
 
@@ -633,7 +643,8 @@ def load_content() -> dict:
         "projects": projects,
         "playground": playground,
         "about": {"bio": about.get("bio", ""), "experience": cv(about.get("experience")),
-                  "education": cv(about.get("education")), "awards": about.get("awards") or []},
+                  "education": cv(about.get("education")), "awards": about.get("awards") or [],
+                  "featured": about.get("featured") or []},
     }
 
 
