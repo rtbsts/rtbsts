@@ -298,8 +298,6 @@ def loader(ctx: Ctx) -> str:
     # data-i is turned into --i by the JS (the CSP does not allow inline styles)
     return f"""<div class="loader" aria-hidden="true">
   <div class="loader__name">{letters}</div>
-  <div class="loader__bar"><span class="loader__progress"></span></div>
-  <div class="loader__count"><span class="loader__num">0</span></div>
 </div>"""
 
 

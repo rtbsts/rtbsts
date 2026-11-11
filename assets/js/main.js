@@ -93,43 +93,32 @@
   /* ---------- 5. Loader (first visit of the session only) --------------- */
   const loaderEl = document.querySelector('.loader');
   const runLoader = () => {
-    const num = loaderEl.querySelector('.loader__num');
-    const bar = loaderEl.querySelector('.loader__progress');
     // "important" images: the first visible ones
     const critical = $$('img.media__el, .pg__img').slice(0, 3);
-    const total = critical.length || 1;
-    let done = 0, shown = 0, finished = false;
+    let done = 0, finished = false;
     // only animate the name once the font is ready (avoids a typeface "jump")
     const fontsReady = () => loaderEl.classList.add('fonts-ready');
     (document.fonts ? document.fonts.load('1em "Neue Montreal"') : Promise.resolve())
       .then(fontsReady, fontsReady);
     setTimeout(fontsReady, 800);
     const start = performance.now();
-    const MIN = 1500, MAX = 4500;
+    const MIN = 1400, MAX = 6000;     // let the name land; never wait forever
 
-    const onOne = () => { done++; };
+    const check = () => {
+      if (finished) return;
+      const elapsed = performance.now() - start;
+      if ((done >= critical.length && elapsed >= MIN) || elapsed >= MAX) { finished = true; leave(); }
+      else setTimeout(check, 100);
+    };
     critical.forEach(img => {
       img.loading = 'eager';
-      if (img.complete && img.naturalWidth) onOne();
+      if (img.complete && img.naturalWidth) done++;
       else {
-        img.addEventListener('load', onOne, { once: true });
-        img.addEventListener('error', onOne, { once: true });
+        img.addEventListener('load', () => done++, { once: true });
+        img.addEventListener('error', () => done++, { once: true });
       }
     });
-
-    const tick = now => {
-      const elapsed = now - start;
-      const real = done / total;
-      const timeP = Math.min(elapsed / MIN, 1);              // never finishes before the minimum
-      const goal = elapsed > MAX ? 1 : Math.min(timeP, real < 1 ? Math.max(0.15, real) * 0.95 : 1);
-      shown += (goal - shown) * 0.12;
-      if (goal === 1 && shown > 0.995) shown = 1;
-      num.textContent = String(Math.round(shown * 100));
-      bar.style.setProperty('--p', shown.toFixed(3));
-      if (shown < 1) requestAnimationFrame(tick);
-      else if (!finished) { finished = true; setTimeout(leave, 200); }
-    };
-    requestAnimationFrame(tick);
+    check();
 
     function leave() {
       try { sessionStorage.setItem('rb-intro', '1'); } catch (e) {}
