@@ -239,14 +239,29 @@
   const DUR = reduceMotion ? 0 : 750;
   const EASE = 'cubic-bezier(.77, 0, .18, 1)';
 
+  // phones / portrait: caption sits right under the image and the counter above it,
+  // with Previous · Close · Next along the bottom
+  const compact = () => VW < 760 || VH > VW;
   function fitRect(d) {
     const g = gutter();
-    const top = 70, bottom = VW < 760 || VH > VW ? 156 : 100;   // keep clear of menu and caption bar
+    let top = 70, bottom = 100;                                // desktop: menu above, caption bar below
+    if (compact()) {
+      top = 92;                                                // menu + counter
+      bottom = cap.offsetHeight + 14 + 64 + (parseFloat(getComputedStyle(lb).paddingBottom) || 0);
+    }
     const aw = VW - g * 2, ah = VH - top - bottom;
     const s = Math.min(aw / d.w, ah / d.h);
     const w = d.w * s, h = d.h * s;
     return { x: (VW - w) / 2, y: top + (ah - h) / 2, w, h };
   }
+  // tell the CSS where the image is, so caption and counter can hug it
+  const anchor = r => {
+    lb.style.setProperty('--ix', `${r.x.toFixed(1)}px`);
+    lb.style.setProperty('--iy', `${r.y.toFixed(1)}px`);
+    lb.style.setProperty('--ir', `${(VW - r.x - r.w).toFixed(1)}px`);
+    lb.style.setProperty('--ib', `${(r.y + r.h).toFixed(1)}px`);
+  };
+  const lbTarget = idx => { const r = fitRect(data[idx]); anchor(r); return r; };
   const place = (el, r) => {
     el.style.width = `${r.w}px`; el.style.height = `${r.h}px`;
     el.style.transform = `translate3d(${r.x}px, ${r.y}px, 0)`;
@@ -304,7 +319,7 @@
     const img = makeImg(idx, thumb.currentSrc || thumb.src);
     figure.prepend(img);
     lbState = { idx, img, t: performance.now() };
-    await flip(img, from, fitRect(data[idx]), DUR);
+    await flip(img, from, lbTarget(idx), DUR);
     lb.classList.add('is-ready');
   }
 
@@ -315,9 +330,9 @@
     const old = lbState.img;
     const img = makeImg(idx);
     img.style.opacity = '0';
-    place(img, fitRect(data[idx]));
-    figure.prepend(img);
     fill(idx);
+    place(img, lbTarget(idx));
+    figure.prepend(img);
     const fade = (el, a, b) => el.animate([{ opacity: a }, { opacity: b }], { duration: reduceMotion ? 0 : 380, easing: 'ease', fill: 'forwards' }).finished.catch(() => {});
     await fade(old, 1, 0); old.remove();
     await new Promise(res => (img.complete ? res() : (img.onload = img.onerror = res)));
@@ -380,6 +395,6 @@
   let rt;
   addEventListener('resize', () => {
     clearTimeout(rt);
-    rt = setTimeout(() => { if (!lbState) { build(); render(); } else if (lbState) place(lbState.img, fitRect(data[lbState.idx])); }, 150);
+    rt = setTimeout(() => { if (!lbState) { build(); render(); } else if (lbState) place(lbState.img, lbTarget(lbState.idx)); }, 150);
   });
 })();

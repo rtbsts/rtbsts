@@ -507,7 +507,19 @@ html.lenis, html.lenis body { height: auto; }
 }
 .pg-lb__btn:hover { background-size: 100% 1px; }
 @media (orientation: portrait), (max-width: 760px) {
-  .pg-lb__cap { max-width: none; right: var(--gutter); bottom: calc(46px + env(safe-area-inset-bottom, 0px)); }
+  /* caption right under the image, left-aligned with it; counter above its top-right corner */
+  .pg-lb { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .pg-lb__cap { max-width: none; left: var(--ix, var(--gutter)); right: var(--gutter); top: calc(var(--ib, 0px) + 10px); bottom: auto; }
+  .pg-lb__count { position: fixed; right: var(--ir, var(--gutter)); top: calc(var(--iy, 92px) - 20px); font-size: 12px; }
+  /* Previous · Close · Next along the bottom, one size up */
+  .pg-lb__bar {
+    left: var(--gutter); right: var(--gutter); bottom: calc(22px + env(safe-area-inset-bottom, 0px));
+    display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; font-size: 13px;
+  }
+  .pg-lb__btn { padding-block: 8px; }
+  .pg-lb__btn[data-lb="prev"]  { grid-column: 1; justify-self: start; }
+  .pg-lb__btn[data-lb="close"] { grid-column: 2; grid-row: 1; justify-self: center; }
+  .pg-lb__btn[data-lb="next"]  { grid-column: 3; grid-row: 1; justify-self: end; }
 }
 @media (prefers-reduced-motion: reduce) {
   .pg__img { transform: none; }
