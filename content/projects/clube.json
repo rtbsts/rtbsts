@@ -1,0 +1,53 @@
+{
+  "title": "Clube Photoshoot",
+  "slug": "clube",
+  "order": 110,
+  "comingSoon": false,
+  "categories": [
+    "Art Direction",
+    "Styling"
+  ],
+  "credits": [
+    "Designed at",
+    "Volta Studio"
+  ],
+  "text": [],
+  "cover": "/originals/clube/rb-cl-001.jpg",
+  "coverPortrait": "",
+  "thumb": "/originals/clube/rb-cl-001.jpg",
+  "thumbHover": "",
+  "gallery": [
+    {
+      "layout": "full",
+      "image": "/originals/clube/rb-cl-002.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/clube/rb-cl-001.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/clube/rb-cl-003.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/clube/rb-cl-004.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/clube/rb-cl-005.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/clube/rb-cl-006.jpeg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/clube/rb-cl-007.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/clube/rb-cl-008.jpg"
+    }
+  ]
+}

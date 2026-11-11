@@ -1,0 +1,1644 @@
+{
+ "ballure/rb-bal-001.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1166,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#d8d7d5",
+  "base": "img/ballure/rb-bal-001",
+  "key": "8d0e7844b6b8443c118b3bc674d1b47a33335546"
+ },
+ "ballure/rb-bal-002.jpg": {
+  "type": "image",
+  "w": 1324,
+  "h": 1500,
+  "widths": [
+   640,
+   1280,
+   1324
+  ],
+  "color": "#d9d8d6",
+  "base": "img/ballure/rb-bal-002",
+  "key": "db2c1b106ce6bf01928bd9739b5b8e081972b126"
+ },
+ "bang/rb-ba-001.jpeg": {
+  "type": "image",
+  "w": 2108,
+  "h": 1440,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2108
+  ],
+  "color": "#2a2a2a",
+  "base": "img/bang/rb-ba-001",
+  "key": "a75fe21fe0d060dde02daa055d681cf870753656"
+ },
+ "bang/rb-ba-002.jpeg": {
+  "type": "image",
+  "w": 2108,
+  "h": 1440,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2108
+  ],
+  "color": "#2b2b2b",
+  "base": "img/bang/rb-ba-002",
+  "key": "4297db381e78191cad91c23193c495006859a2eb"
+ },
+ "bang/rb-ba-003.jpeg": {
+  "type": "image",
+  "w": 2108,
+  "h": 1440,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2108
+  ],
+  "color": "#292929",
+  "base": "img/bang/rb-ba-003",
+  "key": "cc301b6b8a65c49ee58292e11e9ab0058344d1e7"
+ },
+ "bang/rb-ba-005.gif": {
+  "type": "video",
+  "w": 1032,
+  "h": 1440,
+  "color": "#212020",
+  "base": "img/bang/rb-ba-005",
+  "key": "361f067e89837a5a7bf9ebbb87bc925e132ac6ab"
+ },
+ "bang/rb-ba-006.jpeg": {
+  "type": "image",
+  "w": 2108,
+  "h": 1440,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2108
+  ],
+  "color": "#141414",
+  "base": "img/bang/rb-ba-006",
+  "key": "e67a9f7c13796f7e6580929cf5179edc6ee235b3"
+ },
+ "bang/rb-ba-007.jpeg": {
+  "type": "image",
+  "w": 2108,
+  "h": 1440,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2108
+  ],
+  "color": "#1d1d1d",
+  "base": "img/bang/rb-ba-007",
+  "key": "046bfcc6079d7421325e8fca1a83f1d6db52b35f"
+ },
+ "clube/rb-cl-001.jpg": {
+  "type": "image",
+  "w": 2108,
+  "h": 1440,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2108
+  ],
+  "color": "#baa48d",
+  "base": "img/clube/rb-cl-001",
+  "key": "f720732c427a6d303e58d2acc66a1f48c392252e"
+ },
+ "clube/rb-cl-002.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 1709,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#4a3f2f",
+  "base": "img/clube/rb-cl-002",
+  "key": "293d57085d2740ab469e7db3318b6f83efbac391"
+ },
+ "clube/rb-cl-003.jpg": {
+  "type": "image",
+  "w": 2108,
+  "h": 1440,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2108
+  ],
+  "color": "#0d3a76",
+  "base": "img/clube/rb-cl-003",
+  "key": "c0b99d1307b4f5bc4afa93769a5f1fd41b34996e"
+ },
+ "clube/rb-cl-004.jpg": {
+  "type": "image",
+  "w": 2108,
+  "h": 1440,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2108
+  ],
+  "color": "#513f37",
+  "base": "img/clube/rb-cl-004",
+  "key": "e3a67019f8b2d3ec0fc1488a8285db68ebbbf241"
+ },
+ "clube/rb-cl-005.jpg": {
+  "type": "image",
+  "w": 2108,
+  "h": 1440,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2108
+  ],
+  "color": "#a28870",
+  "base": "img/clube/rb-cl-005",
+  "key": "7f378a7daf03ce1c27467f6e6c7051157e276ff0"
+ },
+ "clube/rb-cl-006.jpeg": {
+  "type": "image",
+  "w": 2108,
+  "h": 1440,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2108
+  ],
+  "color": "#6c5e5d",
+  "base": "img/clube/rb-cl-006",
+  "key": "8780b48eb0f54dba32df46d663d3c8dca9499317"
+ },
+ "clube/rb-cl-007.jpg": {
+  "type": "image",
+  "w": 2108,
+  "h": 1440,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2108
+  ],
+  "color": "#2a4672",
+  "base": "img/clube/rb-cl-007",
+  "key": "05893d4ac6207cfc062459caae8414e5fcd1d712"
+ },
+ "clube/rb-cl-008.jpg": {
+  "type": "image",
+  "w": 2108,
+  "h": 1440,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2108
+  ],
+  "color": "#42322c",
+  "base": "img/clube/rb-cl-008",
+  "key": "a69ec4365ae5d6477044d3b1d5c3407e9227d180"
+ },
+ "exilado/rb-ex-001.jpg": {
+  "type": "image",
+  "w": 1920,
+  "h": 1080,
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "color": "#414141",
+  "base": "img/exilado/rb-ex-001",
+  "key": "8cde16878b97ebfafe0b1a29b9a6a0f68e8f05d2"
+ },
+ "exilado/rb-ex-002.jpg": {
+  "type": "image",
+  "w": 1920,
+  "h": 1080,
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "color": "#363735",
+  "base": "img/exilado/rb-ex-002",
+  "key": "1bb1ce0b0132b305a737548f4b6c5d01c4c615ba"
+ },
+ "exilado/rb-ex-003.jpg": {
+  "type": "image",
+  "w": 1920,
+  "h": 1080,
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "color": "#1e1e1e",
+  "base": "img/exilado/rb-ex-003",
+  "key": "e4f29ce6eec49078c2a4bf77d94fa1bf059aeea6"
+ },
+ "exilado/rb-ex-004.jpg": {
+  "type": "image",
+  "w": 1080,
+  "h": 1920,
+  "widths": [
+   640,
+   1080
+  ],
+  "color": "#191818",
+  "base": "img/exilado/rb-ex-004",
+  "key": "4fc2ae96c1ce760f7f68870e10edc5a22bfe58af"
+ },
+ "exilado/rb-ex-005.jpg": {
+  "type": "image",
+  "w": 1080,
+  "h": 1920,
+  "widths": [
+   640,
+   1080
+  ],
+  "color": "#201f20",
+  "base": "img/exilado/rb-ex-005",
+  "key": "3ac6975471b7455c045fb3a8d2bf5e95d5a9ce18"
+ },
+ "exilado/rb-ex-006.jpg": {
+  "type": "image",
+  "w": 1080,
+  "h": 1920,
+  "widths": [
+   640,
+   1080
+  ],
+  "color": "#2b2a2b",
+  "base": "img/exilado/rb-ex-006",
+  "key": "4c8278073ad4887e0a128509ac9466fcdda04194"
+ },
+ "exilado/rb-ex-007.jpg": {
+  "type": "image",
+  "w": 1080,
+  "h": 1920,
+  "widths": [
+   640,
+   1080
+  ],
+  "color": "#1a1818",
+  "base": "img/exilado/rb-ex-007",
+  "key": "0595b1f3768723abc10a90f4758213bf3db0d052"
+ },
+ "exilado/rb-ex-008.jpg": {
+  "type": "image",
+  "w": 1920,
+  "h": 1080,
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "color": "#403f3e",
+  "base": "img/exilado/rb-ex-008",
+  "key": "3ccf1cd3957a84af4d7d6b2149fd87eab818cc93"
+ },
+ "flik/rb-fl-001.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1125,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#382a26",
+  "base": "img/flik/rb-fl-001",
+  "key": "15bcf28253d6a4138fafe60fdf7b4295a21ab753"
+ },
+ "flik/rb-fl-002.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1125,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#383221",
+  "base": "img/flik/rb-fl-002",
+  "key": "23fb1e887ab7603e9f89ad756fc66e542c5cf016"
+ },
+ "flik/rb-fl-003.jpg": {
+  "type": "image",
+  "w": 1563,
+  "h": 2001,
+  "widths": [
+   640,
+   1280,
+   1563
+  ],
+  "color": "#383632",
+  "base": "img/flik/rb-fl-003",
+  "key": "4199275ff86b6278276a7126d1edcb8527af3c85"
+ },
+ "flik/rb-fl-004.jpg": {
+  "type": "image",
+  "w": 1563,
+  "h": 2001,
+  "widths": [
+   640,
+   1280,
+   1563
+  ],
+  "color": "#a7a095",
+  "base": "img/flik/rb-fl-004",
+  "key": "50d469be2a7d9939cebf0a538e526520a37cde8d"
+ },
+ "flik/rb-fl-005.jpg": {
+  "type": "image",
+  "w": 2201,
+  "h": 1238,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2201
+  ],
+  "color": "#3b3934",
+  "base": "img/flik/rb-fl-005",
+  "key": "d22335e3a3449cc5325949b6b0c76471e182a5f1"
+ },
+ "flow/rb-fl-001.jpg": {
+  "type": "image",
+  "w": 2300,
+  "h": 1294,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2300
+  ],
+  "color": "#1c2940",
+  "base": "img/flow/rb-fl-001",
+  "key": "0ceba799bef72d5a9bdf1fb74c3173e01572ae77"
+ },
+ "flow/rb-fl-002.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1201,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#c1c1c3",
+  "base": "img/flow/rb-fl-002",
+  "key": "0b403b7b258ece5c7b680975504dce3aff5b84d9"
+ },
+ "folhas-caidas/rb-fo-001-m.jpg": {
+  "type": "image",
+  "w": 1152,
+  "h": 1920,
+  "widths": [
+   640,
+   1152
+  ],
+  "color": "#868479",
+  "base": "img/folhas-caidas/rb-fo-001-m",
+  "key": "f9dc334baff9bd257b89d8a570198ae2230f17aa"
+ },
+ "folhas-caidas/rb-fo-001.jpg": {
+  "type": "image",
+  "w": 2501,
+  "h": 1393,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2501
+  ],
+  "color": "#958d80",
+  "base": "img/folhas-caidas/rb-fo-001",
+  "key": "f20957b542275427c448e835b49f14e5820ff9c1"
+ },
+ "folhas-caidas/rb-fo-002.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1360,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#b2b2aa",
+  "base": "img/folhas-caidas/rb-fo-002",
+  "key": "0e57e42f227f73b003cf8f2a2e5c5f6d2899a496"
+ },
+ "folhas-caidas/rb-fo-003.jpg": {
+  "type": "image",
+  "w": 1000,
+  "h": 1500,
+  "widths": [
+   640,
+   1000
+  ],
+  "color": "#645e52",
+  "base": "img/folhas-caidas/rb-fo-003",
+  "key": "966fde4e3b18300eb2d0d41443d7d9f72cc55b32"
+ },
+ "folhas-caidas/rb-fo-004.jpg": {
+  "type": "image",
+  "w": 1000,
+  "h": 1500,
+  "widths": [
+   640,
+   1000
+  ],
+  "color": "#7f7669",
+  "base": "img/folhas-caidas/rb-fo-004",
+  "key": "f6ff3d2b510d8ea03d4c9be0fd819885611d60a2"
+ },
+ "folhas-caidas/rb-fo-005.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1198,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#b5afa5",
+  "base": "img/folhas-caidas/rb-fo-005",
+  "key": "ab7ca9c6e7174d9b756dcf1d1f29beeda9693257"
+ },
+ "folhas-caidas/rb-fo-006.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1333,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#8a8a76",
+  "base": "img/folhas-caidas/rb-fo-006",
+  "key": "450287d6872ca68e3abd7e5866925fc0f15e1431"
+ },
+ "folhas-caidas/rb-fo-007.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1333,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#8a8277",
+  "base": "img/folhas-caidas/rb-fo-007",
+  "key": "7884b4598ae40b55dedd71ae918c807d64898126"
+ },
+ "folhas-caidas/rb-fo-008.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1198,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#a6a19b",
+  "base": "img/folhas-caidas/rb-fo-008",
+  "key": "5c1c91a4089150506ade123cf5a976019a4c79e7"
+ },
+ "folhas-caidas/rb-fo-009.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1333,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#949586",
+  "base": "img/folhas-caidas/rb-fo-009",
+  "key": "62461a30cdf92d92c4b0c8d4c100cbcbd17ddfc9"
+ },
+ "folhas-caidas/rb-fo-010.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1360,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#baada3",
+  "base": "img/folhas-caidas/rb-fo-010",
+  "key": "4a21d17e386d7d327e975e2a806c0de6e91fbd78"
+ },
+ "folhas-caidas/rb-fo-011.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1333,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#8a8478",
+  "base": "img/folhas-caidas/rb-fo-011",
+  "key": "0d7ece1ef1b5db89043c434d39e806b9f6adb1f1"
+ },
+ "joly/rb-jo-001-m.jpg": {
+  "type": "image",
+  "w": 1080,
+  "h": 1920,
+  "widths": [
+   640,
+   1080
+  ],
+  "color": "#917159",
+  "base": "img/joly/rb-jo-001-m",
+  "key": "f9511c547c81e0d2c8985c6f95b4b877c2e34c89"
+ },
+ "joly/rb-jo-001.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1333,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#8d6c55",
+  "base": "img/joly/rb-jo-001",
+  "key": "c624f76c937e813a09f81cd26fbc1ac8d2883e2e"
+ },
+ "joly/rb-jo-002.jpg": {
+  "type": "image",
+  "w": 1920,
+  "h": 1200,
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "color": "#b4b36c",
+  "base": "img/joly/rb-jo-002",
+  "key": "22f5af7e5873cc1a68138aec714854f51b0a936c"
+ },
+ "joly/rb-jo-003.jpg": {
+  "type": "image",
+  "w": 1920,
+  "h": 1410,
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "color": "#9a9768",
+  "base": "img/joly/rb-jo-003",
+  "key": "a3f66f072ef2eb53aa68fdd83fe0523aec90a9e6"
+ },
+ "joly/rb-jo-004.jpg": {
+  "type": "image",
+  "w": 1920,
+  "h": 1200,
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "color": "#bab7ae",
+  "base": "img/joly/rb-jo-004",
+  "key": "fa52b925ad991ddd65f7104d532cf35b79e41be2"
+ },
+ "joly/rb-jo-005.jpg": {
+  "type": "image",
+  "w": 1920,
+  "h": 1123,
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "color": "#9a8268",
+  "base": "img/joly/rb-jo-005",
+  "key": "35f60eb3f5aed80070ba05f867239548593a8399"
+ },
+ "joly/rb-jo-006.png": {
+  "type": "image",
+  "w": 800,
+  "h": 1000,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#8cbaed",
+  "base": "img/joly/rb-jo-006",
+  "key": "e625a52cbf55ee891266f5e83af6ef97fd075e61"
+ },
+ "joly/rb-jo-007.gif": {
+  "type": "video",
+  "w": 800,
+  "h": 1000,
+  "color": "#423d33",
+  "base": "img/joly/rb-jo-007",
+  "key": "39d433309ed690228aaf1761bdf0633c07894be1"
+ },
+ "joly/rb-jo-008.jpg": {
+  "type": "image",
+  "w": 1000,
+  "h": 1250,
+  "widths": [
+   640,
+   1000
+  ],
+  "color": "#80808a",
+  "base": "img/joly/rb-jo-008",
+  "key": "653f9b042456b6e3df7a1ed0ee2cca2b9aee0694"
+ },
+ "joly/rb-jo-009.jpg": {
+  "type": "image",
+  "w": 1000,
+  "h": 1250,
+  "widths": [
+   640,
+   1000
+  ],
+  "color": "#cac8c7",
+  "base": "img/joly/rb-jo-009",
+  "key": "2f2d0f804e19995b4b0a10579b2b881edb2c07c4"
+ },
+ "manifesto/rb-ma-001.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 1556,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#bcb9ba",
+  "base": "img/manifesto/rb-ma-001",
+  "key": "b8cb29e8bd418c1360f391cef861a809e359b48b"
+ },
+ "manifesto/rb-ma-003.jpg": {
+  "type": "image",
+  "w": 1352,
+  "h": 1674,
+  "widths": [
+   640,
+   1280,
+   1352
+  ],
+  "color": "#b0aeaf",
+  "base": "img/manifesto/rb-ma-003",
+  "key": "3f06e2cd593d8fc5ebe9ea56ff07fb3a12944764"
+ },
+ "namaskar/rb-na-001.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1333,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#bf600f",
+  "base": "img/namaskar/rb-na-001",
+  "key": "07c20e18d2538ff56dd42ffb2e538dc99474bd6b"
+ },
+ "namaskar/rb-na-002.jpg": {
+  "type": "image",
+  "w": 1500,
+  "h": 1000,
+  "widths": [
+   640,
+   1280,
+   1500
+  ],
+  "color": "#662f0b",
+  "base": "img/namaskar/rb-na-002",
+  "key": "ba029d96ec92067ae356be6a570567f7f3178a69"
+ },
+ "namaskar/rb-na-003.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#dc732c",
+  "base": "img/namaskar/rb-na-003",
+  "key": "4acd7ae1df9721ff0240fb25bb0d1b580ab64661"
+ },
+ "namaskar/rb-na-004.jpg": {
+  "type": "image",
+  "w": 1440,
+  "h": 2160,
+  "widths": [
+   640,
+   1280,
+   1440
+  ],
+  "color": "#cea885",
+  "base": "img/namaskar/rb-na-004",
+  "key": "ff65da0343b1bbe7a0393d5d7b5c035abaab670a"
+ },
+ "namaskar/rb-na-005.jpg": {
+  "type": "image",
+  "w": 1500,
+  "h": 1000,
+  "widths": [
+   640,
+   1280,
+   1500
+  ],
+  "color": "#d07725",
+  "base": "img/namaskar/rb-na-005",
+  "key": "94591c5c46910b010c2cc325508fd583bf6feb59"
+ },
+ "namaskar/rb-na-006.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#b0420a",
+  "base": "img/namaskar/rb-na-006",
+  "key": "91b9cb12b8ab4803e00877ccb18f31d56ebd2d4b"
+ },
+ "namaskar/rb-na-007.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#c49d81",
+  "base": "img/namaskar/rb-na-007",
+  "key": "fa166cb246e1bdb400bbe623670a02d244cc1501"
+ },
+ "namaskar/rb-na-008.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#937e70",
+  "base": "img/namaskar/rb-na-008",
+  "key": "b533ceedcad5f1a574bd604af1c8968c68c154b4"
+ },
+ "namaskar/rb-na-009.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#833418",
+  "base": "img/namaskar/rb-na-009",
+  "key": "96f1b76fe8e68fe1e981ecefcb6c4774fe06f420"
+ },
+ "namaskar/rb-na-010.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#b7470c",
+  "base": "img/namaskar/rb-na-010",
+  "key": "d08e468fbf8e62407fef03c9895e4fc703148742"
+ },
+ "namaskar/rb-na-011.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#cfa48a",
+  "base": "img/namaskar/rb-na-011",
+  "key": "257c31e056d2a26b211b095513c76c7d91c5f072"
+ },
+ "namaskar/rb-na-012.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#d69641",
+  "base": "img/namaskar/rb-na-012",
+  "key": "938055ee1cd698fd1dbf35d0167d8460efbb1514"
+ },
+ "namaskar/rb-na-013.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#c0855f",
+  "base": "img/namaskar/rb-na-013",
+  "key": "641ae8a5022c7b1cc9e48a963505a9a40507678e"
+ },
+ "namaskar/rb-na-014.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#c18b58",
+  "base": "img/namaskar/rb-na-014",
+  "key": "f798f860c565e8bf774a9285b829a0bc34246d00"
+ },
+ "namaskar/rb-na-016.jpg": {
+  "type": "image",
+  "w": 1330,
+  "h": 2000,
+  "widths": [
+   640,
+   1280,
+   1330
+  ],
+  "color": "#cda169",
+  "base": "img/namaskar/rb-na-016",
+  "key": "81434960ba18196637c618ae8593523f21ff4292"
+ },
+ "namaskar/rb-na-017.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#9d96ba",
+  "base": "img/namaskar/rb-na-017",
+  "key": "87bf54c17f1cbed71494d349b065b7c4fb29348e"
+ },
+ "namaskar/rb-na-019.jpg": {
+  "type": "image",
+  "w": 1200,
+  "h": 1800,
+  "widths": [
+   640,
+   1200
+  ],
+  "color": "#bd4712",
+  "base": "img/namaskar/rb-na-019",
+  "key": "210a6a151792236807e1ee52763ed01d184b214f"
+ },
+ "noeme/rb-no-001.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1224,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#2f2b25",
+  "base": "img/noeme/rb-no-001",
+  "key": "7546c3bbc432163fb4d2d74c7deb808674131e78"
+ },
+ "noeme/rb-no-002.jpeg": {
+  "type": "image",
+  "w": 1920,
+  "h": 1080,
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "color": "#75818b",
+  "base": "img/noeme/rb-no-002",
+  "key": "5cb3331e5af31f773b37e8d4da25e8552bc69da9"
+ },
+ "noeme/rb-no-003.jpeg": {
+  "type": "image",
+  "w": 1920,
+  "h": 1080,
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "color": "#90847f",
+  "base": "img/noeme/rb-no-003",
+  "key": "89e7d828b2e86ce45b9e4419b513b3ce5619b544"
+ },
+ "noeme/rb-no-004.jpg": {
+  "type": "image",
+  "w": 2216,
+  "h": 1247,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2216
+  ],
+  "color": "#324543",
+  "base": "img/noeme/rb-no-004",
+  "key": "3cee6783949e6ec51fb003c663ee7b221c479582"
+ },
+ "noeme/rb-no-005.jpg": {
+  "type": "image",
+  "w": 2200,
+  "h": 1467,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2200
+  ],
+  "color": "#66685e",
+  "base": "img/noeme/rb-no-005",
+  "key": "693b5b97fe3187aa656325c818c89ac7b8aff424"
+ },
+ "noeme/rb-no-006.jpg": {
+  "type": "image",
+  "w": 2200,
+  "h": 1467,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2200
+  ],
+  "color": "#bfc2bf",
+  "base": "img/noeme/rb-no-006",
+  "key": "a4ce2319eb606e4e2b23b6ec8b36d328e2f0d2c9"
+ },
+ "stucco-livro/rb-st-001.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 1707,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#86837f",
+  "base": "img/stucco-livro/rb-st-001",
+  "key": "a7c4dcf261779b69e0d5c13cc3faf9f09dda9a96"
+ },
+ "stucco-livro/rb-st-002.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 1707,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#848389",
+  "base": "img/stucco-livro/rb-st-002",
+  "key": "2763faef970cf18986147fe848bd96820f2d795d"
+ },
+ "stucco-livro/rb-st-003.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 1707,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#5f5652",
+  "base": "img/stucco-livro/rb-st-003",
+  "key": "f3c5c6cd57c105cd7e504fe4c41c4ff869e81e16"
+ },
+ "stucco-livro/rb-st-004.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 1707,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#716e6c",
+  "base": "img/stucco-livro/rb-st-004",
+  "key": "95234fe426a590767e68173440ca2bf1e9e3614a"
+ },
+ "stucco-livro/rb-st-005.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 1707,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#756969",
+  "base": "img/stucco-livro/rb-st-005",
+  "key": "18feb75bda38bd04426cb7febdfc6986c94a2ff0"
+ },
+ "stucco-livro/rb-st-006.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 1707,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#8c8888",
+  "base": "img/stucco-livro/rb-st-006",
+  "key": "e0c71e5d775fa3be68926e994e8f5d1d1a18da0b"
+ },
+ "stucco-livro/rb-st-007.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 1707,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#877675",
+  "base": "img/stucco-livro/rb-st-007",
+  "key": "e6eedd0f40ba9606142935fc59c0e3904e21ef53"
+ },
+ "stucco-livro/rb-st-008.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 1707,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#6a5e5d",
+  "base": "img/stucco-livro/rb-st-008",
+  "key": "aae69900a8032e7a0864aad7a190c3003fba8cfa"
+ },
+ "susana-bettencourt/rb-sb-001-m.jpg": {
+  "type": "image",
+  "w": 600,
+  "h": 1000,
+  "widths": [
+   600
+  ],
+  "color": "#716454",
+  "base": "img/susana-bettencourt/rb-sb-001-m",
+  "key": "b23205dce02e2159a731d79c212d8ce13d388f81"
+ },
+ "susana-bettencourt/rb-sb-001.jpg": {
+  "type": "image",
+  "w": 2500,
+  "h": 1499,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2500
+  ],
+  "color": "#7d7263",
+  "base": "img/susana-bettencourt/rb-sb-001",
+  "key": "57c4cbce778dd30a9f9a70dd3b6c09b6b4a1d2b7"
+ },
+ "susana-bettencourt/rb-sb-002.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#93928e",
+  "base": "img/susana-bettencourt/rb-sb-002",
+  "key": "3a22d1d7567af61f53af3fa1d26088b1c1115295"
+ },
+ "susana-bettencourt/rb-sb-003.png": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#050505",
+  "base": "img/susana-bettencourt/rb-sb-003",
+  "key": "8f484763e122c205ce29ee2db254de0e216f0e72"
+ },
+ "susana-bettencourt/rb-sb-004.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#2d2927",
+  "base": "img/susana-bettencourt/rb-sb-004",
+  "key": "859cc3760cc905d38842cae24ee921a50059d4bd"
+ },
+ "susana-bettencourt/rb-sb-005.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#9d956f",
+  "base": "img/susana-bettencourt/rb-sb-005",
+  "key": "5f635a6e5d8ebf6a1e2c94d6987247bccabe3a57"
+ },
+ "susana-bettencourt/rb-sb-006.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#595400",
+  "base": "img/susana-bettencourt/rb-sb-006",
+  "key": "b42fc2aa64dd3b83fad06183efe39927debd7dc0"
+ },
+ "susana-bettencourt/rb-sb-008.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#403c55",
+  "base": "img/susana-bettencourt/rb-sb-008",
+  "key": "f70bb7f93cb9ea2e1e9572f64f61a673bd05bc74"
+ },
+ "susana-bettencourt/rb-sb-009.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#625860",
+  "base": "img/susana-bettencourt/rb-sb-009",
+  "key": "2ae1ad3111af1a97aeeefadcfcc1d851e7969e26"
+ },
+ "susana-bettencourt/rb-sb-010.png": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#030303",
+  "base": "img/susana-bettencourt/rb-sb-010",
+  "key": "5a8447f7d050e4bf91b6c1ca7ebffa7fad9e8100"
+ },
+ "susana-bettencourt/rb-sb-011.jpg": {
+  "type": "image",
+  "w": 2500,
+  "h": 1667,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2500
+  ],
+  "color": "#93922c",
+  "base": "img/susana-bettencourt/rb-sb-011",
+  "key": "e6368f53610f553e071385ec1dac4b940c912a24"
+ },
+ "susana-bettencourt/rb-sb-012.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#283566",
+  "base": "img/susana-bettencourt/rb-sb-012",
+  "key": "96585b54c82155bf5b4d7b5d85c97e170354a84f"
+ },
+ "susana-bettencourt/rb-sb-013.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#888684",
+  "base": "img/susana-bettencourt/rb-sb-013",
+  "key": "aee282dda7122c68abdfbcb52116feb3c5880456"
+ },
+ "susana-bettencourt/rb-sb-014.png": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#0b0b0b",
+  "base": "img/susana-bettencourt/rb-sb-014",
+  "key": "6bbf75787a49c8af0bd99cbef32efe5837bc1fa9"
+ },
+ "susana-bettencourt/rb-sb-015.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#969a6e",
+  "base": "img/susana-bettencourt/rb-sb-015",
+  "key": "bbfe0356114e6333d871703f9d35645836c3684e"
+ },
+ "susana-bettencourt/rb-sb-016.gif": {
+  "type": "video",
+  "w": 1800,
+  "h": 994,
+  "color": "#442f2e",
+  "base": "img/susana-bettencourt/rb-sb-016",
+  "key": "2db85a34b0c0d2287e15839235dfdb3d68e02d13"
+ },
+ "susana-bettencourt/rb-sb-017.jpg": {
+  "type": "image",
+  "w": 1805,
+  "h": 1200,
+  "widths": [
+   640,
+   1280,
+   1805
+  ],
+  "color": "#8e836f",
+  "base": "img/susana-bettencourt/rb-sb-017",
+  "key": "feaa22cfca1a71148e1d07e66df84f871bcbb32c"
+ },
+ "susana-bettencourt/rb-sb-018.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#4a3c44",
+  "base": "img/susana-bettencourt/rb-sb-018",
+  "key": "b56ffa7b1ec29af30c4e1e9bb6afea6e661d04cb"
+ },
+ "susana-bettencourt/rb-sb-019.gif": {
+  "type": "video",
+  "w": 800,
+  "h": 1200,
+  "color": "#000000",
+  "base": "img/susana-bettencourt/rb-sb-019",
+  "key": "ef189b7cbd2a4c442bbaafbc6767c31543d83a91"
+ },
+ "susana-bettencourt/rb-sb-020.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#807766",
+  "base": "img/susana-bettencourt/rb-sb-020",
+  "key": "8743c4bf5d3e55d846d80be8461d4e402bacb8c3"
+ },
+ "susana-bettencourt/rb-sb-021.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#5b4e4d",
+  "base": "img/susana-bettencourt/rb-sb-021",
+  "key": "e1012d251cc250e2033b81f7a834d99734548454"
+ },
+ "susana-bettencourt/rb-sb-022.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#8b8882",
+  "base": "img/susana-bettencourt/rb-sb-022",
+  "key": "32746dc63339387ed078a112b74a0f376f542f46"
+ },
+ "susana-bettencourt/rb-sb-023.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#424551",
+  "base": "img/susana-bettencourt/rb-sb-023",
+  "key": "a9070b6c32624e50255a8ab1db57a2d87b356474"
+ },
+ "susana-bettencourt/rb-sb-025.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1330,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#656561",
+  "base": "img/susana-bettencourt/rb-sb-025",
+  "key": "a6defa06df3cbbc45373aba2047919bbd4c0c521"
+ },
+ "susana-bettencourt/rb-sb-026.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#4a4c72",
+  "base": "img/susana-bettencourt/rb-sb-026",
+  "key": "a8e1e1e90931a4481ef9ec11c6daf4e25d68bae7"
+ },
+ "susana-bettencourt/rb-sb-027.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#68332a",
+  "base": "img/susana-bettencourt/rb-sb-027",
+  "key": "759c819131f30b7e205ce34d1c7786bf8e4ea957"
+ },
+ "teixinha/rb-te-001.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1333,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#7d6648",
+  "base": "img/teixinha/rb-te-001",
+  "key": "8992b1bc7d21a18fd4a8a2e5b9e75486ffb30aab"
+ },
+ "teixinha/rb-te-002.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#4c4438",
+  "base": "img/teixinha/rb-te-002",
+  "key": "56ebaaf821eeac1b6176dc30836fc04d52e99cf1"
+ },
+ "teixinha/rb-te-003.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#ad906d",
+  "base": "img/teixinha/rb-te-003",
+  "key": "796b431bc8b30db50deac8574d33283b5fa9d8c4"
+ },
+ "teixinha/rb-te-004.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#c4b8aa",
+  "base": "img/teixinha/rb-te-004",
+  "key": "d3ae6fd7ca2ae47c394b6416204bff7ac23d189c"
+ },
+ "teixinha/rb-te-005.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#2f2a25",
+  "base": "img/teixinha/rb-te-005",
+  "key": "b17157c259a220efda869fc00e912d50b0e3d1aa"
+ },
+ "teixinha/rb-te-006.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1333,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#484237",
+  "base": "img/teixinha/rb-te-006",
+  "key": "4199e1f6663d8629ded7b20476dce60b128e9c2c"
+ },
+ "teixinha/rb-te-007.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1333,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#a38d6d",
+  "base": "img/teixinha/rb-te-007",
+  "key": "c3d3518eca1f6670a84aaa60b399b0ed73d7783d"
+ },
+ "teixinha/rb-te-008.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#c0a382",
+  "base": "img/teixinha/rb-te-008",
+  "key": "e7e99d44d77b1dac8ba16b21baccb828cc3ae0fe"
+ },
+ "teixinha/rb-te-009.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#a7865b",
+  "base": "img/teixinha/rb-te-009",
+  "key": "c6c4c9e0e4bf433f824ab3e964fa31ab79b141c4"
+ },
+ "teixinha/rb-te-010.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#c7bdac",
+  "base": "img/teixinha/rb-te-010",
+  "key": "1108bb450bb401d7ce331a0764b63efec99859b2"
+ },
+ "teixinha/rb-te-011.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#6c5b41",
+  "base": "img/teixinha/rb-te-011",
+  "key": "53e786b3fc1419200db301a6dd8170b7b9790e59"
+ },
+ "teixinha/rb-te-012.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1333,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#413a31",
+  "base": "img/teixinha/rb-te-012",
+  "key": "ed767f9463bcba23d873f526a4b8399b92b4e063"
+ },
+ "teixinha/rb-te-013.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#9f927f",
+  "base": "img/teixinha/rb-te-013",
+  "key": "97a23c173523da0d63b62b9c01afff2a6086aed4"
+ },
+ "teixinha/rb-te-014.jpg": {
+  "type": "image",
+  "w": 800,
+  "h": 1200,
+  "widths": [
+   640,
+   800
+  ],
+  "color": "#b0a48d",
+  "base": "img/teixinha/rb-te-014",
+  "key": "08de0ba644004f1f302f73fc69ac2c54229266cf"
+ },
+ "teixinha/rb-te-015.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1333,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#80725e",
+  "base": "img/teixinha/rb-te-015",
+  "key": "b216b7acf27c8673c0f8116b66b5e802161b8b35"
+ },
+ "wuda/rb-wu-001.jpg": {
+  "type": "image",
+  "w": 2400,
+  "h": 1920,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2400
+  ],
+  "color": "#a29f9d",
+  "base": "img/wuda/rb-wu-001",
+  "key": "78e66a31526dac5ff62453d7d9c7df0854e0bb31"
+ }
+}

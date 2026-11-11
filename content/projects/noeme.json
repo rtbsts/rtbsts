@@ -1,0 +1,45 @@
+{
+  "title": "Noeme",
+  "slug": "noeme",
+  "order": 40,
+  "comingSoon": false,
+  "categories": [
+    "Art Direction",
+    "Brand Identity"
+  ],
+  "credits": [
+    "Freelance",
+    "Work"
+  ],
+  "text": [],
+  "cover": "/originals/noeme/rb-no-001.jpg",
+  "coverPortrait": "",
+  "thumb": "/originals/noeme/rb-no-001.jpg",
+  "thumbHover": "",
+  "gallery": [
+    {
+      "layout": "full",
+      "image": "/originals/noeme/rb-no-003.jpeg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/noeme/rb-no-001.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/noeme/rb-no-002.jpeg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/noeme/rb-no-004.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/noeme/rb-no-005.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/noeme/rb-no-006.jpg"
+    }
+  ]
+}

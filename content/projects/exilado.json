@@ -1,0 +1,50 @@
+{
+  "title": "Exilado Sparkling Wine",
+  "slug": "exilado",
+  "order": 30,
+  "comingSoon": false,
+  "categories": [
+    "Art Direction",
+    "Packaging",
+    "Photography"
+  ],
+  "credits": [
+    "Designed at",
+    "327 Creative Studio"
+  ],
+  "text": [
+    "Exilado — the Grande Reserva Brut Nature 100% Chardonnay sparkling wine, produced by Almeida Garrett Wines, using the classic method. The bottles of sparkling wine are stored for 5 years in Minas da Recheira, at a depth of 100 meters, allowing a stage free from large variations in humidity and temperature. The name Exilado comes from the poem “Os Exilados” by Almeida Garrett, representing both the exile of the wine in the mines during its stage, and that of the Almeida Garrett family in France in 1910, after the fall of the monarchy in Portugal. This concept was transposed to the label design, where can be observed a separation/distance of the two frontal elements that compose it, as well as the chromatic choice that reinforces the concept of its identity. Some verses of this poem can be unveiled along the label, portrayed using print finishes that enhance the feel to the touch and reflect the unique quality of this product."
+  ],
+  "cover": "/originals/exilado/rb-ex-001.jpg",
+  "coverPortrait": "/originals/exilado/rb-ex-006.jpg",
+  "thumb": "/originals/exilado/rb-ex-001.jpg",
+  "thumbHover": "",
+  "gallery": [
+    {
+      "layout": "full",
+      "image": "/originals/exilado/rb-ex-001.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/exilado/rb-ex-002.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/exilado/rb-ex-003.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/exilado/rb-ex-004.jpg",
+      "image2": "/originals/exilado/rb-ex-006.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/exilado/rb-ex-005.jpg",
+      "image2": "/originals/exilado/rb-ex-007.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/exilado/rb-ex-008.jpg"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "title": "Susana Bettencourt",
+  "slug": "susana-bettencourt",
+  "order": 20,
+  "comingSoon": false,
+  "categories": [
+    "Art Direction",
+    "Brand Design",
+    "Photography"
+  ],
+  "credits": [
+    "Designed at",
+    "327 Creative Studio"
+  ],
+  "text": [
+    "Susana Bettencourt is a Portuguese fashion designer who produces knitwear from yarn to piece. The brand’s ultimate goal is to explore the synergy of new technology and the digital with traditional craft, being known for the perfect jacquards with powerful, exclusive prints, in addition to handcrafted pieces of extravagant dimensions. Her work is based on using and respecting the material, an endeavour of slow fashion and sustainability. Working alongside the brand, the inspiration behind the revamped visual identity came from the design of the knitted pieces’ ends, characteristic of the brand, combined with typographical interplays to achieve a minimal but contemporary look. The black & white palette was chosen so that the pieces are the protagonists, using only a few fluor yellow notes as a secondary colour.",
+    "Photography by Rita Bastos, Frederico Santos, Ugo Camera and Maria Luís Gonçalves"
+  ],
+  "cover": "/originals/susana-bettencourt/rb-sb-001.jpg",
+  "coverPortrait": "/originals/susana-bettencourt/rb-sb-001-m.jpg",
+  "thumb": "/originals/susana-bettencourt/rb-sb-001.jpg",
+  "thumbHover": "",
+  "gallery": [
+    {
+      "layout": "full",
+      "image": "/originals/susana-bettencourt/rb-sb-001.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/susana-bettencourt/rb-sb-002.jpg",
+      "image2": "/originals/susana-bettencourt/rb-sb-003.png"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/susana-bettencourt/rb-sb-004.jpg",
+      "image2": "/originals/susana-bettencourt/rb-sb-005.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/susana-bettencourt/rb-sb-006.jpg",
+      "image2": "/originals/susana-bettencourt/rb-sb-008.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/susana-bettencourt/rb-sb-009.jpg",
+      "image2": "/originals/susana-bettencourt/rb-sb-010.png"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/susana-bettencourt/rb-sb-011.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/susana-bettencourt/rb-sb-012.jpg",
+      "image2": "/originals/susana-bettencourt/rb-sb-013.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/susana-bettencourt/rb-sb-014.png",
+      "image2": "/originals/susana-bettencourt/rb-sb-015.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/susana-bettencourt/rb-sb-016.gif"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/susana-bettencourt/rb-sb-017.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/susana-bettencourt/rb-sb-018.jpg",
+      "image2": "/originals/susana-bettencourt/rb-sb-019.gif"
+    },
+    {
+      "layout": "vimeo",
+      "vimeo": "813214798"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/susana-bettencourt/rb-sb-020.jpg",
+      "image2": "/originals/susana-bettencourt/rb-sb-021.jpg"
+    },
+    {
+      "layout": "vimeo",
+      "vimeo": "813254916"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/susana-bettencourt/rb-sb-022.jpg",
+      "image2": "/originals/susana-bettencourt/rb-sb-023.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/susana-bettencourt/rb-sb-026.jpg",
+      "image2": "/originals/susana-bettencourt/rb-sb-027.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/susana-bettencourt/rb-sb-025.jpg"
+    }
+  ]
+}

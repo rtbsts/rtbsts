@@ -1,0 +1,43 @@
+{
+  "bio": "Multidisciplinary Graphic Designer and Art Director based in Porto, Portugal. Holds a degree in Communication Design from FBAUP. Works full-time at a design studio and part-time as a freelancer, catering to a wide range of clients. Since the beginning of 2015, I have been involved in a wide array of graphic design projects, spanning from print to digital, with a particular expertise in all things print and graphic production, including paper/material selection, printing methods, and several finishing techniques, with a recent emphasis on sustainable choices in my design work. My primary experience lies in Branding and Packaging projects, but I've also ventured into various other design domains, such as Editorial Design, Infographics, Beverage Labeling, Naming, Environments, Signage, Exhibition Design, Motion Graphics, and Web Design. In recent times, I have incorporated photography as a complementary element to my graphic design and visual identity work, as exemplified in the majority of the projects I present, featuring photos I have taken. Always striving to enhance my skills and absorb knowledge from my surroundings to develop more solid ideas and stronger concepts.",
+  "experience": [
+    {
+      "dates": "Mar 2020 — Present",
+      "place": "327 Creative Studio, Porto",
+      "role": "Art Director & Senior Designer"
+    },
+    {
+      "dates": "Oct 2018 — Mar 2020",
+      "place": "Legendary, Porto",
+      "role": "Graphic Designer"
+    },
+    {
+      "dates": "Feb 2015 — May 2018",
+      "place": "Volta Studio, Porto",
+      "role": "Graphic Designer"
+    }
+  ],
+  "education": [
+    {
+      "dates": "Oct 2013 — Mar 2014",
+      "place": "Design e Arti Multimediali Erasmus",
+      "role": "Instituto Universitario di Architettura di Venezia, Italy"
+    },
+    {
+      "dates": "Sep 2011 — Jul 2015",
+      "place": "Communication Design Graduation",
+      "role": "Faculdade de Belas Artes da Universidade do Porto, Portugal"
+    }
+  ],
+  "awards": [
+    "Silver Award at Prémios Lusófonos da Criatividade in packaging design category with Namaskar Ayurved.",
+    "Bronze Award at ADCEurope in packaging design category with Exilado Sparkling Wine.",
+    "Silver Award at Clube dos Criativos ‘22 in label design category with Exilado Sparkling Wine.",
+    "Bronze Award at Clube dos Criativos ‘22 in label design category with Folhas Caídas Wine Collection.",
+    "Award at Design Awards M&P ‘16 in the category Labels with O’phelia Jameson & Maldita Labe Craft Beer.",
+    "Silver at Clube dos Criativos ‘17 in the category Labels with O’phelia Jameson & Maldita Craft Beer.",
+    "Bronze at Clube dos Criativos ‘17 in the category Packaging with Presskit O’phelia Jameson & Maldita.",
+    "6th classified at Clube dos Criativos ‘17 ranking in the category of Ilustration.",
+    "14th classified at Clube dos Criativos ‘17 ranking in the category of Graphic Designer."
+  ]
+}

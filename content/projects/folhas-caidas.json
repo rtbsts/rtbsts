@@ -1,0 +1,65 @@
+{
+  "title": "Folhas Caídas",
+  "slug": "folhas-caidas",
+  "order": 50,
+  "comingSoon": false,
+  "categories": [
+    "Art Direction",
+    "Packaging",
+    "Photography"
+  ],
+  "credits": [
+    "Designed at",
+    "327 Creative Studio"
+  ],
+  "text": [
+    "Folhas Caídas — the first range of wines from Almeida Garrett to be launched under the brand’s new concept, which aims to associate the art of its signature wines with literature, through the works João Almeida Garrett - one of the greatest of Romanticism and Portuguese poetry. For each range, the name of one of its masterpieces was carefully chosen, and a selection of excerpts can be unveilled on each label or bottle neck. For this Chardonnay Collection, where three poems from the work Folhas Caidas were chosen to represent each of the wines - we chose to explore different typographic arrangements, which combined with a colourful palette, create the perfect balance between the classical background and modernity. All details have been thoroughly explored, using high-quality finishes, thus highlighting the main features of each product. Each poem is discreetly placed on the neck of each bottle."
+  ],
+  "cover": "/originals/folhas-caidas/rb-fo-001.jpg",
+  "coverPortrait": "/originals/folhas-caidas/rb-fo-001-m.jpg",
+  "thumb": "/originals/folhas-caidas/rb-fo-001-m.jpg",
+  "thumbHover": "",
+  "gallery": [
+    {
+      "layout": "full",
+      "image": "/originals/folhas-caidas/rb-fo-001.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/folhas-caidas/rb-fo-002.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/folhas-caidas/rb-fo-003.jpg",
+      "image2": "/originals/folhas-caidas/rb-fo-004.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/folhas-caidas/rb-fo-005.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/folhas-caidas/rb-fo-006.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/folhas-caidas/rb-fo-007.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/folhas-caidas/rb-fo-008.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/folhas-caidas/rb-fo-009.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/folhas-caidas/rb-fo-010.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/folhas-caidas/rb-fo-011.jpg"
+    }
+  ]
+}

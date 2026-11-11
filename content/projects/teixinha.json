@@ -1,0 +1,69 @@
+{
+  "title": "Teixinha",
+  "slug": "teixinha",
+  "order": 100,
+  "comingSoon": false,
+  "categories": [
+    "Art Direction",
+    "Packaging",
+    "Photography"
+  ],
+  "credits": [
+    "Designed at",
+    "327 Creative Studio"
+  ],
+  "text": [
+    "Nestled in the heart of the Serra de São Mamede Natural Park, at a lofty 700-meter altitude, Herdade da Malhadinha Nova embarked on a journey of continuation. Teixinha emerged in a place where nature's splendor reigns, where pristine greens, enigmatic fog, and ancient chestnut trees create a captivating landscape. The challenge was to forge a new identity for Teixinha, a fresh Malhadinha sub-brand, while preserving a strong conceptual link to their enduring work. Since 2003, the new generation of the family has left its creative mark on Malhadinha wines through illustrations. This legacy of artistic expression was to be continued in a new form—through the art of storytelling, crafting a narrative that encapsulates what makes Teixinha truly unique. This concept extends to visitors, who, when the tasting room opens its doors, can leave their personal messages and experiences on blank labels, fostering a deeper interaction with the brand. The colors of each wine label echo the natural palette of the surroundings. The typography, rooted in tradition, acquires a contemporary aesthetic through intricate details. A concrete medal, reflecting the material in which the wine is stored, proudly bears the Herdade da Malhadinha Nova inscription, reinforcing the brand's presence. From labels to packaging, every material and finish was carefully chosen, ensuring the products' presentation and upholding the brand's commitment to sustainability, a hallmark of Herdade da Malhadinha Nova."
+  ],
+  "cover": "/originals/teixinha/rb-te-001.jpg",
+  "coverPortrait": "/originals/teixinha/rb-te-003.jpg",
+  "thumb": "/originals/teixinha/rb-te-003.jpg",
+  "thumbHover": "",
+  "gallery": [
+    {
+      "layout": "full",
+      "image": "/originals/teixinha/rb-te-001.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/teixinha/rb-te-002.jpg",
+      "image2": "/originals/teixinha/rb-te-003.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/teixinha/rb-te-004.jpg",
+      "image2": "/originals/teixinha/rb-te-005.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/teixinha/rb-te-006.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/teixinha/rb-te-007.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/teixinha/rb-te-008.jpg",
+      "image2": "/originals/teixinha/rb-te-009.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/teixinha/rb-te-010.jpg",
+      "image2": "/originals/teixinha/rb-te-011.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/teixinha/rb-te-012.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/teixinha/rb-te-013.jpg",
+      "image2": "/originals/teixinha/rb-te-014.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/teixinha/rb-te-015.jpg"
+    }
+  ]
+}

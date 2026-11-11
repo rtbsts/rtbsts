@@ -1,0 +1,54 @@
+{
+  "title": "Stucco",
+  "slug": "stucco",
+  "order": 70,
+  "comingSoon": false,
+  "categories": [
+    "Editorial Design"
+  ],
+  "credits": [
+    "Designed at",
+    "327 Creative Studio"
+  ],
+  "text": [
+    "The hardcover bound with Saville Row paper by Fedrigoni, presents in deboss one of the technical drawings developed by Stucco, combined with details in black hot foil stamping in the typography. Swiss binding with visible stitching, allowing the presence of the brand’s secondary color (blue) throughout the book. Printed on Arena Rough uncoated paper from Fedrigoni, it includes several trifolding pages, allowing to explore all the details of each project. Typographic arrangements assume the main role, creating a balance with the remaining contents presented."
+  ],
+  "cover": "/originals/stucco-livro/rb-st-001.jpg",
+  "coverPortrait": "",
+  "thumb": "/originals/stucco-livro/rb-st-001.jpg",
+  "thumbHover": "",
+  "gallery": [
+    {
+      "layout": "full",
+      "image": "/originals/stucco-livro/rb-st-001.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/stucco-livro/rb-st-002.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/stucco-livro/rb-st-003.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/stucco-livro/rb-st-005.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/stucco-livro/rb-st-006.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/stucco-livro/rb-st-007.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/stucco-livro/rb-st-004.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/stucco-livro/rb-st-008.jpg"
+    }
+  ]
+}

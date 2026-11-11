@@ -1,0 +1,47 @@
+{
+  "title": "Bang Gin",
+  "slug": "bang",
+  "order": 60,
+  "comingSoon": false,
+  "categories": [
+    "Art Direction",
+    "Packaging"
+  ],
+  "credits": [
+    "Designed at",
+    "Volta Studio"
+  ],
+  "text": [
+    "BANG Gin has a round, sturdy, black tinted bottle, celebrating suspense and drama. With a black marble screw top, debossed leather engravings on the bottle neck and a mix of screenprinting and paper labels, this bottle is a celebration of the mixed feelings of anxiety and anticipation when reading a brief for the very first time."
+  ],
+  "cover": "/originals/bang/rb-ba-006.jpeg",
+  "coverPortrait": "",
+  "thumb": "/originals/bang/rb-ba-005.gif",
+  "thumbHover": "",
+  "gallery": [
+    {
+      "layout": "full",
+      "image": "/originals/bang/rb-ba-001.jpeg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/bang/rb-ba-002.jpeg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/bang/rb-ba-003.jpeg"
+    },
+    {
+      "layout": "half",
+      "image": "/originals/bang/rb-ba-005.gif"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/bang/rb-ba-006.jpeg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/bang/rb-ba-007.jpeg"
+    }
+  ]
+}

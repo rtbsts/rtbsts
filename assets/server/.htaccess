@@ -1,0 +1,62 @@
+# ---------------------------------------------------------------
+#  Rita Bastos — security and performance settings (Apache)
+#  Works on most shared hosting (cPanel, PTisp, Amen, Hostinger,
+#  OVH…). It just needs to sit in the root folder of the site.
+# ---------------------------------------------------------------
+
+# No folder listings
+Options -Indexes
+
+# Custom error page
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Block hidden/sensitive files (.git, .env, backups…)
+  RewriteRule (^|/)\.(?!well-known) - [F]
+  RewriteRule \.(bak|old|orig|swp|sql|log|ini|py|json|zip)$ - [F,NC]
+
+  # Hotlink protection: other sites cannot display your
+  # images/videos straight from your server.
+  # (Requests without a referrer — e.g. opening an image directly — still work.)
+  RewriteCond %{HTTP_REFERER} !^$
+  RewriteCond %{HTTP_HOST}@@%{HTTP_REFERER} !^([^@]*)@@https?://\1/.*$ [NC]
+  RewriteCond %{HTTP_REFERER} !(google|bing|duckduckgo|pinterest|facebook|instagram|linkedin|behance)\. [NC]
+  RewriteRule \.(webp|jpe?g|png|gif|mp4)$ - [F,NC]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; style-src 'self'; script-src 'self'; frame-src https://player.vimeo.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+  Header unset X-Powered-By
+  Header unset Server
+
+  # Caching: images, videos and fonts never change -> 1 year; HTML/CSS/JS -> revalidate
+  <FilesMatch "\.(webp|jpe?g|png|gif|mp4|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html|css|js)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType video/mp4 .mp4
+</IfModule>

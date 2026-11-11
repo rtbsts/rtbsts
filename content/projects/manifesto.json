@@ -1,0 +1,19 @@
+{
+  "title": "Manifesto",
+  "slug": "manifesto",
+  "order": 150,
+  "comingSoon": true,
+  "categories": [
+    "Coming Soon"
+  ],
+  "credits": [
+    "Designed at",
+    "327 Creative Studio"
+  ],
+  "text": [],
+  "cover": "/originals/manifesto/rb-ma-001.jpg",
+  "coverPortrait": "/originals/manifesto/rb-ma-003.jpg",
+  "thumb": "/originals/manifesto/rb-ma-003.jpg",
+  "thumbHover": "",
+  "gallery": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Wuda",
+  "slug": "wuda",
+  "order": 120,
+  "comingSoon": true,
+  "categories": [
+    "Coming Soon"
+  ],
+  "credits": [
+    "Designed at",
+    "327 Creative Studio"
+  ],
+  "text": [],
+  "cover": "/originals/wuda/rb-wu-001.jpg",
+  "coverPortrait": "",
+  "thumb": "/originals/wuda/rb-wu-001.jpg",
+  "thumbHover": "",
+  "gallery": []
+}

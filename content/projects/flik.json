@@ -1,0 +1,38 @@
+{
+  "title": "Flik Collection",
+  "slug": "flik",
+  "order": 80,
+  "comingSoon": false,
+  "categories": [
+    "Art Direction",
+    "Packaging"
+  ],
+  "credits": [
+    "Designed at",
+    "327 Creative Studio"
+  ],
+  "text": [],
+  "cover": "/originals/flik/rb-fl-001.jpg",
+  "coverPortrait": "",
+  "thumb": "/originals/flik/rb-fl-002.jpg",
+  "thumbHover": "",
+  "gallery": [
+    {
+      "layout": "full",
+      "image": "/originals/flik/rb-fl-002.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/flik/rb-fl-003.jpg",
+      "image2": "/originals/flik/rb-fl-004.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/flik/rb-fl-005.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/flik/rb-fl-001.jpg"
+    }
+  ]
+}

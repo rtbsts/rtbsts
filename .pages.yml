@@ -1,0 +1,201 @@
+# Pages CMS configuration — https://pagescms.org
+# Defines the editing forms for the case studies, the About page and the site settings.
+
+media:
+  input: originals
+  output: /originals
+  rename: safe
+  extensions: [jpg, jpeg, png, gif, webp, mp4, mov, m4v, webm]
+
+content:
+  # ------------------------------------------------------------------ #
+  - name: projects
+    label: Case studies
+    type: collection
+    path: content/projects
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      fields: [title, order, comingSoon]
+      primary: title
+      sort: [order, title]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: slug
+        label: Page address
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9-]+$"
+          message: "Lowercase letters, numbers and hyphens only (e.g. namaskar)"
+        description: "Used in the link: ritabastos.pt/project-<address>.html. Don't change it after publishing."
+
+      - name: order
+        label: Order
+        type: number
+        required: true
+        description: "Position on the Home and Work pages. Lower numbers come first (10, 20, 30…)."
+
+      - name: comingSoon
+        label: Coming soon
+        type: boolean
+        description: "Shows the project on Home and Work, but without a page of its own."
+
+      - name: hidden
+        label: Hide from the site
+        type: boolean
+        description: "Keeps the project saved but takes it off the site."
+
+      - name: categories
+        label: Categories
+        type: string
+        list: true
+        description: "One per line, e.g. Art Direction, Packaging."
+
+      - name: credits
+        label: Credits
+        type: string
+        list: true
+        description: "One line each, e.g. 'Designed at' then '327 Creative Studio'."
+
+      - name: text
+        label: Description
+        type: text
+        list: true
+        description: "One box per paragraph. Leave empty for no text."
+
+      - name: cover
+        label: Home banner
+        type: image
+        required: true
+        description: "Wide image shown on the Home page."
+
+      - name: coverPortrait
+        label: Home banner (mobile)
+        type: image
+        description: "Optional upright crop for phones. Leave empty to reuse the banner."
+
+      - name: thumb
+        label: Work page thumbnail
+        type: image
+        description: "Upright image for the Work grid. Leave empty to reuse the banner."
+
+      - name: thumbHover
+        label: Work page hover image
+        type: image
+        description: "Image that rises over the thumbnail on hover. Leave empty to use the first gallery image."
+
+      - name: gallery
+        label: Gallery
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{index}. {layout} — {image}{vimeo}{video}"
+        description: "Rows of the case study, top to bottom. Drag to reorder."
+        fields:
+          - name: layout
+            label: Row type
+            type: select
+            required: true
+            options:
+              values:
+                - name: full
+                  label: Full width image
+                - name: pair
+                  label: Two images side by side
+                - name: half
+                  label: One image, half width
+                - name: video
+                  label: Video (uploaded file)
+                - name: vimeo
+                  label: Vimeo video
+          - name: image
+            label: Image (left image for side by side)
+            type: image
+          - name: image2
+            label: Second image (right) — side by side only
+            type: image
+          - name: video
+            label: Video file — MP4 or MOV, short loops work best
+            type: file
+            options:
+              extensions: [mp4, mov, m4v, webm]
+          - name: vimeo
+            label: Vimeo link or ID — Vimeo rows only
+            type: string
+          - name: ratio
+            label: Vimeo aspect ratio
+            type: select
+            options:
+              values: ["16/9", "4/3", "1/1", "9/16", "21/9"]
+
+  # ------------------------------------------------------------------ #
+  - name: about
+    label: About page
+    type: file
+    path: content/about.json
+    format: json
+    fields:
+      - name: bio
+        label: Bio
+        type: text
+      - name: experience
+        label: Experience
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{dates} — {place}"
+        fields:
+          - { name: dates, label: Dates, type: string }
+          - { name: place, label: "Company, city", type: string }
+          - { name: role, label: Role, type: string }
+      - name: education
+        label: Education
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{dates} — {place}"
+        fields:
+          - { name: dates, label: Dates, type: string }
+          - { name: place, label: Course, type: string }
+          - { name: role, label: School, type: string }
+      - name: awards
+        label: Awards
+        type: string
+        list: true
+
+  # ------------------------------------------------------------------ #
+  - name: settings
+    label: Site settings
+    type: file
+    path: content/settings.json
+    format: json
+    fields:
+      - { name: name, label: Name, type: string }
+      - { name: url, label: Website address, type: string }
+      - name: description
+        label: Description for Google and link previews
+        type: text
+      - name: allowIndexing
+        label: Show the site on Google
+        type: boolean
+      - name: copyrightStart
+        label: First year in the copyright line
+        type: number
+      - name: contact
+        label: Contact details
+        type: object
+        fields:
+          - { name: city, label: City, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: phone, label: Phone, type: string }

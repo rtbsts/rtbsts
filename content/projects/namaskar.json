@@ -1,0 +1,75 @@
+{
+  "title": "Namaskar Ayurved",
+  "slug": "namaskar",
+  "order": 10,
+  "comingSoon": false,
+  "categories": [
+    "Art Direction",
+    "Brand Design",
+    "Photography"
+  ],
+  "credits": [
+    "Designed at",
+    "327 Creative Studio"
+  ],
+  "text": [
+    "The brand identity designed for Namaskar Ayurveda had as its primary purpose the perfect blend between small elements of Indian roots and a minimal aesthetic, characteristic of international brands, showing a contemporary and modern look and feel. Matured at its core, the typographically driven identity system takes advantage of a powerful combination of typefaces, exploring its visual presentation through the depiction of shapes and text breaks. The colour palette is made of warm hues, reminiscent of Indian spices (Haldi, saffron and red chilli powder) and lilac — a fresh and contemporary tone. Each jar was carefully chosen, with frosted coloured glass with screen print. In order to add a distinct look to the range of products, the black matte squared bottles were custom designed by us, enfolded by a coloured label highlighting the brand colours."
+  ],
+  "cover": "/originals/namaskar/rb-na-001.jpg",
+  "coverPortrait": "/originals/namaskar/rb-na-003.jpg",
+  "thumb": "/originals/namaskar/rb-na-002.jpg",
+  "thumbHover": "",
+  "gallery": [
+    {
+      "layout": "full",
+      "image": "/originals/namaskar/rb-na-001.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/namaskar/rb-na-002.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/namaskar/rb-na-003.jpg",
+      "image2": "/originals/namaskar/rb-na-004.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/namaskar/rb-na-006.jpg",
+      "image2": "/originals/namaskar/rb-na-007.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/namaskar/rb-na-008.jpg",
+      "image2": "/originals/namaskar/rb-na-009.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/namaskar/rb-na-010.jpg",
+      "image2": "/originals/namaskar/rb-na-011.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/namaskar/rb-na-012.jpg",
+      "image2": "/originals/namaskar/rb-na-013.jpg"
+    },
+    {
+      "layout": "vimeo",
+      "vimeo": "794155346"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/namaskar/rb-na-014.jpg",
+      "image2": "/originals/namaskar/rb-na-016.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/namaskar/rb-na-019.jpg",
+      "image2": "/originals/namaskar/rb-na-017.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/namaskar/rb-na-005.jpg"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Joly Beauty",
+  "slug": "joly",
+  "order": 90,
+  "comingSoon": false,
+  "categories": [
+    "Art Direction",
+    "Branding",
+    "Web Design"
+  ],
+  "credits": [
+    "Designed at",
+    "327 Creative Studio"
+  ],
+  "text": [
+    "Joly Beauty emerges as a breath of fresh, youthful air. Joly’s mission is simple yet profound – to redefine beauty and wellness by embracing the diversity, vibrancy, and ever-evolving nature of individuality. A celebration of inclusivity, culture and empowerment by curating an enticing and superior range of cosmetics that empower individuals to define beauty on their own standards. The visual identity is a harmonious blend of youthful freshness and sophistication achieved through a balanced typographical approach and the pastel yet vibrant color pallete, setting this brand apart from the competition in its e-commerce platform approach. Besides the project being mainly digital, we also developed the packaging and some stationery items, where the materials and finishes align with the brand’s positioning."
+  ],
+  "cover": "/originals/joly/rb-jo-001.jpg",
+  "coverPortrait": "/originals/joly/rb-jo-001-m.jpg",
+  "thumb": "/originals/joly/rb-jo-007.gif",
+  "thumbHover": "",
+  "gallery": [
+    {
+      "layout": "full",
+      "image": "/originals/joly/rb-jo-001.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/joly/rb-jo-002.jpg"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/joly/rb-jo-003.jpg"
+    },
+    {
+      "layout": "vimeo",
+      "vimeo": "878378083"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/joly/rb-jo-004.jpg"
+    },
+    {
+      "layout": "vimeo",
+      "vimeo": "878384372"
+    },
+    {
+      "layout": "full",
+      "image": "/originals/joly/rb-jo-005.jpg"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/joly/rb-jo-006.png",
+      "image2": "/originals/joly/rb-jo-007.gif"
+    },
+    {
+      "layout": "vimeo",
+      "vimeo": "878381854"
+    },
+    {
+      "layout": "pair",
+      "image": "/originals/joly/rb-jo-008.jpg",
+      "image2": "/originals/joly/rb-jo-009.jpg"
+    },
+    {
+      "layout": "vimeo",
+      "vimeo": "878384697"
+    }
+  ]
+}
