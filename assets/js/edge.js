@@ -13,6 +13,9 @@
   // Opened straight from the computer (file://): browsers block WebGL from reading
   // local images, so keep the normal images instead.
   if (location.protocol === 'file:') return;
+  // Phones and tablets scroll outside JavaScript, so a canvas redrawn from JS
+  // trails the page by a frame and the images shake: show the normal images there.
+  if (matchMedia('(hover: none), (pointer: coarse)').matches) return;
 
   const STRENGTH = 1;
   const DISTANCE = 34;

@@ -8,6 +8,15 @@
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- 0a. Touch screens: scroll effects run in CSS -----------------
+     Phones scroll outside JavaScript, so effects updated from JS lag a frame
+     behind and the images seem to shake. Where the browser supports
+     scroll-driven animations, parallax and the side-margin bleed are done
+     in CSS instead (class "sdt"), in step with the scroll. */
+  const touch = matchMedia('(hover: none), (pointer: coarse)').matches;
+  const sdt = touch && window.CSS && CSS.supports('animation-timeline: view()') && CSS.supports('animation-range: cover 5vh cover 55vh');
+  if (sdt) root.classList.add('sdt');
+
   /* ---------- 0. Smooth scrolling (Lenis), mouse/trackpad only ----------- */
   let lenis = null;
   if (!reduceMotion && window.Lenis && matchMedia('(hover: hover) and (pointer: fine)').matches
@@ -168,7 +177,7 @@
 
   /* ---------- 7. Gentle parallax on the home banners --------------------- */
   const banners = $$('.media--banner');
-  if (banners.length && !reduceMotion) {
+  if (banners.length && !reduceMotion && !sdt) {
     let ticking = false;
     const update = () => {
       const vh = innerHeight;
@@ -191,7 +200,7 @@
   const gutter = () => parseFloat(getComputedStyle(root).getPropertyValue('--gutter')) || 20;
   const bleedHome = $$('.home .project__link');
   const bleedRows = $$('.project-page .row');
-  if (bleedHome.length || bleedRows.length) {
+  if ((bleedHome.length || bleedRows.length) && !sdt) {
     const ease = t => 1 - Math.pow(1 - t, 3);                 // easeOutCubic
     const clamp01 = v => Math.min(Math.max(v, 0), 1);
     const set = (el, t) => {
