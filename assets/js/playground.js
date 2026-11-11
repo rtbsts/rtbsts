@@ -94,18 +94,31 @@
     const capRoom = 84;                             // captions are always shown: room for four lines
     for (const { col, row, idx } of slots) {
       const d = data[idx];
-      const layer = Math.floor(r() * LAYERS.length);
       const ar = d.w / d.h;
-      // landscape a bit wider, portrait narrower; then fit inside the cell
-      let w = cellW * (ar >= 1 ? 0.62 + r() * 0.16 : 0.42 + r() * 0.14) * LAYERS[layer].s;
+      // about a quarter of the images are "loose": bigger, off-centre and on the front
+      // layer, so they overlap their neighbours a little. Loose cells are never side by
+      // side, so two of them don't pile up; all the others keep clear space around them.
+      const loose = (col + row) % 2 === 0 && r() < 0.5;
+      const layer = loose ? LAYERS.length - 1 : Math.floor(r() * (LAYERS.length - 1));
+      let w = cellW * (loose
+        ? (ar >= 1 ? 0.95 + r() * 0.25 : 0.62 + r() * 0.16)
+        : (ar >= 1 ? 0.62 + r() * 0.16 : 0.42 + r() * 0.14) * LAYERS[layer].s);
       let h = w / ar;
-      const maxW = cellW - pad * 2, maxH = cellH - pad * 2 - capRoom;
+      const maxW = loose ? cellW * 1.2 : cellW - pad * 2;
+      const maxH = loose ? cellH * 1.05 : cellH - pad * 2 - capRoom;
       if (w > maxW) { w = maxW; h = w / ar; }
       if (h > maxH) { h = maxH; w = h * ar; }
       // stagger alternate columns, then place randomly inside the free space
       const shift = (col % 2) * cellH * 0.35;
-      const x = col * cellW + pad + r() * (cellW - pad * 2 - w);
-      const y = row * cellH + shift + pad + r() * (cellH - pad * 2 - capRoom - h);
+      let x, y;
+      if (loose) {               // centred on the cell, then pushed diagonally into a neighbour
+        const sx = r() < 0.5 ? -1 : 1, sy = r() < 0.5 ? -1 : 1;
+        x = col * cellW + (cellW - w) / 2 + sx * cellW * (0.18 + r() * 0.14);
+        y = row * cellH + shift + (cellH - h - capRoom) / 2 + sy * cellH * (0.16 + r() * 0.12);
+      } else {
+        x = col * cellW + pad + r() * (cellW - pad * 2 - w);
+        y = row * cellH + shift + pad + r() * (cellH - pad * 2 - capRoom - h);
+      }
 
       const el = templates[idx].cloneNode(true);
       el.dataset.n = idx;

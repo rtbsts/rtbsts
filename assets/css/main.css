@@ -454,11 +454,11 @@ html.lenis, html.lenis body { height: auto; }
 }
 .pg__hint.is-hidden, .pg.is-open .pg__hint { opacity: 0; }
 
-/* lightbox: the image over an 85% white veil, the wall faintly visible behind */
+/* lightbox: the image over a 92% white veil, the wall faintly visible behind */
 .pg-lb { position: fixed; inset: 0; z-index: 40; }
 .pg-lb::before {
   content: ""; position: fixed; inset: 0;
-  background: rgb(255 255 255 / .85);
+  background: rgb(255 255 255 / .92);
   opacity: 0; transition: opacity .6s var(--ease-out);
 }
 .pg.is-open .pg-lb::before { opacity: 1; }
