@@ -1654,5 +1654,85 @@
   "color": "#989390",
   "base": "img/bang/rb-ba-008",
   "key": "3e3649fc81c13c068c407faf827d1d446b99547e"
+ },
+ "playground/almeida-garrett-01.jpg": {
+  "type": "image",
+  "w": 2000,
+  "h": 1265,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2000
+  ],
+  "color": "#c9c8c8",
+  "base": "img/playground/almeida-garrett-01",
+  "key": "0dfef46ffb15694a14932e00f69ace55d6802904"
+ },
+ "playground/almeida-garrett-02.jpg": {
+  "type": "image",
+  "w": 1080,
+  "h": 1620,
+  "widths": [
+   640,
+   1080
+  ],
+  "color": "#28282b",
+  "base": "img/playground/almeida-garrett-02",
+  "key": "a7696d1306d295f4548c52299bc5811dcef9cc7e"
+ },
+ "playground/ballure-01.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 3178,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#8e8d8f",
+  "base": "img/playground/ballure-01",
+  "key": "64a65552fbe4a27090f42ea600b19a94940a0e1f"
+ },
+ "playground/ballure-02.jpg": {
+  "type": "image",
+  "w": 1856,
+  "h": 2304,
+  "widths": [
+   640,
+   1280,
+   1856
+  ],
+  "color": "#5c3b29",
+  "base": "img/playground/ballure-02",
+  "key": "ad4a995de6851bd4591f7b7242f2d6c50f4fec26"
+ },
+ "playground/ballure-03.jpg": {
+  "type": "image",
+  "w": 2560,
+  "h": 640,
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "color": "#c0bfb8",
+  "base": "img/playground/ballure-03",
+  "key": "0f0a1ee11420f14f2f7455f37ece5510b8f76696"
+ },
+ "playground/rooh-01.jpg": {
+  "type": "image",
+  "w": 1600,
+  "h": 2000,
+  "widths": [
+   640,
+   1280,
+   1600
+  ],
+  "color": "#9c7b5f",
+  "base": "img/playground/rooh-01",
+  "key": "312db49c3bd9551c03fa6159f370c23150355d05"
  }
 }
