@@ -367,6 +367,9 @@ html.lenis, html.lenis body { height: auto; }
    images are drawn on the canvas and the HTML ones stay invisible (but in place). */
 .gl-stage { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 3; }
 .gl-on .media__el { visibility: hidden; }
+/* the curved images are drawn over the page: hide the placeholder colour behind them,
+   or it shows where the curve pulls the image in */
+.gl-on .media { background-color: transparent; }
 .js [data-reveal].is-in { opacity: 1; transform: none; clip-path: inset(0 0 0 0); }
 
 /* 8. Mobile / portrait ---------------------------------------------------- */
