@@ -249,15 +249,54 @@ def media_block(ctx: Ctx, rel: str, sizes: str, alt: str, eager=False, portrait=
 DOT = '<span class="dot" aria-hidden="true"></span>'
 
 
+OG_SIZE = (1200, 630)
+
+
+def og_card(rel: str | None) -> str | None:
+    """Link-preview image (Slack, WhatsApp, LinkedIn, iMessage…): a 1200×630 JPEG,
+    because many of these services ignore WebP. Cached in optimised/og/."""
+    if not rel:
+        return None
+    src = ORIGINALS / rel
+    if not src.is_file() or src.suffix.lower() in VIDEO_EXT:
+        return None
+    st = src.stat()
+    name = hashlib.sha1(f"{rel}|{st.st_size}|{int(st.st_mtime)}|v2".encode()).hexdigest()[:12]
+    out = IMG_OUT / "og" / f"{name}.jpg"
+    if not out.exists():
+        out.parent.mkdir(parents=True, exist_ok=True)
+        with Image.open(src) as im:
+            im.seek(0)                                    # GIF: first frame
+            im = ImageOps.exif_transpose(im.convert("RGB"))
+            target = OG_SIZE[0] / OG_SIZE[1]
+            if im.width / im.height >= target * 0.8:     # wide enough: crop to fill
+                card = ImageOps.fit(im, OG_SIZE, Image.LANCZOS, centering=(0.5, 0.45))
+            else:                                         # tall: show it whole, padded in its own edge colour
+                edge = Image.new("RGB", (2, im.height))
+                edge.paste(im.crop((0, 0, 1, im.height)), (0, 0))
+                edge.paste(im.crop((im.width - 1, 0, im.width, im.height)), (1, 0))
+                colour = tuple(sorted(edge.getdata(), key=sum)[len(edge.getdata()) // 2])
+                card = Image.new("RGB", OG_SIZE, colour)
+                fitted = ImageOps.contain(im, OG_SIZE, Image.LANCZOS)
+                card.paste(fitted, ((OG_SIZE[0] - fitted.width) // 2, (OG_SIZE[1] - fitted.height) // 2))
+            card.save(out, "JPEG", quality=85, optimize=True, progressive=True)
+    return f"img/og/{name}.jpg"
+
+
 def head(ctx: Ctx, title: str, description: str, body_class: str, og_image: str | None = None) -> str:
     s = ctx.site
     robots = "index, follow" if s.get("allowIndexing", True) else "noindex, nofollow"
     full_title = s["name"] if title == s["name"] else f"{title} — {s['name']}"
     og = ""
-    if og_image:
-        meta = ctx.media[og_image]
-        if meta["type"] == "image":
-            og = f'<meta property="og:image" content="{meta["base"]}-{meta["widths"][min(1, len(meta["widths"]) - 1)]}.webp">'
+    card = og_card(og_image)
+    if card:
+        url = f'{s.get("url", "").rstrip("/")}/{card}'
+        og = (f'<meta property="og:image" content="{esc(url)}">\n'
+              f'<meta property="og:image:width" content="{OG_SIZE[0]}">\n'
+              f'<meta property="og:image:height" content="{OG_SIZE[1]}">\n'
+              f'<meta property="og:image:alt" content="{esc(full_title)}">\n'
+              f'<meta name="twitter:card" content="summary_large_image">\n'
+              f'<meta name="twitter:image" content="{esc(url)}">')
     theme = "#000000" if "page-about" in body_class else "#ffffff"
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -272,6 +311,7 @@ def head(ctx: Ctx, title: str, description: str, body_class: str, og_image: str 
 <meta name="theme-color" content="{theme}">
 <meta name="format-detection" content="telephone=no">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="{esc(s["name"])}">
 <meta property="og:title" content="{esc(full_title)}">
 <meta property="og:description" content="{esc(description)}">
 {og}
@@ -405,7 +445,7 @@ def page_work(ctx: Ctx) -> str:
             cards.append(f'<li class="card"><a class="card__link" href="{href}" data-cursor="View">{inner}</a></li>')
         else:
             cards.append(f'<li class="card is-soon"><div class="card__link" data-cursor="Soon">{inner}</div></li>')
-    return (head(ctx, "Work", "Selected work by " + ctx.site["name"] + ": branding, packaging, editorial design and art direction.", "page-work", ctx.data["projects"][0]["thumb"])
+    return (head(ctx, "Work", "Selected work by " + ctx.site["name"] + ": branding, packaging, editorial design and art direction.", "page-work", ctx.data["projects"][0]["cover"])
             + header(ctx, "work")
             + '<main id="main" class="main work">\n  <h1 class="sr-only">Work</h1>\n  <ul class="grid">\n    '
             + "\n    ".join(cards) + "\n  </ul>\n</main>\n" + footer(ctx))
@@ -436,7 +476,7 @@ def page_about(ctx: Ctx) -> str:
     email = _obfuscate(c["email"])
     phone = _obfuscate(c["phone"])
     phone_href = _obfuscate("tel:" + c["phone"].replace(" ", ""))
-    return (head(ctx, "About", a["bio"][:155].rsplit(" ", 1)[0] + "…", "page-about theme-dark")
+    return (head(ctx, "About", a["bio"][:155].rsplit(" ", 1)[0] + "…", "page-about theme-dark", ctx.data["projects"][0]["cover"])
             + header(ctx, "about")
             + f"""<main id="main" class="main about">
   <h1 class="sr-only">About</h1>
