@@ -260,8 +260,8 @@ def og_card(rel: str | None) -> str | None:
     src = ORIGINALS / rel
     if not src.is_file() or src.suffix.lower() in VIDEO_EXT:
         return None
-    st = src.stat()
-    name = hashlib.sha1(f"{rel}|{st.st_size}|{int(st.st_mtime)}|v2".encode()).hexdigest()[:12]
+    # name from the file's content (not its date), so it is the same on every machine
+    name = hashlib.sha1(src.read_bytes() + b"|og-v2").hexdigest()[:12]
     out = IMG_OUT / "og" / f"{name}.jpg"
     if not out.exists():
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -280,6 +280,11 @@ def og_card(rel: str | None) -> str | None:
                 fitted = ImageOps.contain(im, OG_SIZE, Image.LANCZOS)
                 card.paste(fitted, ((OG_SIZE[0] - fitted.width) // 2, (OG_SIZE[1] - fitted.height) // 2))
             card.save(out, "JPEG", quality=85, optimize=True, progressive=True)
+    # pages are built after optimised/ is copied into dist/, so copy this one across too
+    dest = DIST / "img" / "og" / out.name
+    if not dest.exists():
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(out, dest)
     return f"img/og/{name}.jpg"
 
 
